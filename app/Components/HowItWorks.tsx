@@ -23,7 +23,10 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="w-full flex justify-center bg-white border-b border-gray-100">
+    <section
+      id="how-it-works"
+      className="w-full flex justify-center bg-white border-b border-gray-100"
+    >
       <div className="w-full max-w-325.5 px-4 md:px-8 py-12 md:py-20 border-x border-gray-100">
         {/* Header */}
         <div className="flex flex-row items-center justify-between w-full mb-12">

@@ -7,7 +7,7 @@ export default function PlatformSection() {
   const [activeTab, setActiveTab] = useState('investors');
 
   return (
-    <section className="w-full flex justify-center  bg-white">
+    <section id="platform" className="w-full flex justify-center  bg-white">
       <div className="w-full max-w-325.5 px-4 md:px-8 py-12 md:py-20 border-x border-[#E2E8F0]">
         {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-10">

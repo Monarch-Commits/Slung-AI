@@ -20,22 +20,22 @@ export default function Navbar() {
       <div className="flex items-center gap-8">
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <li>
-            <Link href="#" className="hover:text-gray-900 transition-colors">
+            <Link href="#platform" className="hover:text-gray-900 transition-colors">
               Platform
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-900 transition-colors">
+            <Link href="#how-it-works" className="hover:text-gray-900 transition-colors">
               How It Works
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-900 transition-colors">
+            <Link href="#pricing" className="hover:text-gray-900 transition-colors">
               Pricing
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:text-gray-900 transition-colors">
+            <Link href="#blog" className="hover:text-gray-900 transition-colors">
               Blog
             </Link>
           </li>

@@ -17,7 +17,10 @@ type DataCardProps = {
 
 const PrincipalLanding = () => {
   return (
-    <div className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center px-4 md:px-8 py-10 font-sans text-slate-900">
+    <div
+      id="pricing"
+      className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center px-4 md:px-8 py-10 font-sans text-slate-900"
+    >
       <div className="relative w-full max-w-5xl mb-16 flex flex-col lg:flex-row items-center justify-between gap-10">
         {/* Left Side */}
         <div className="flex flex-col gap-4 z-10 w-full max-w-sm">
