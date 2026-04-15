@@ -4,28 +4,23 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-[1300px] mx-auto border bg-white">
-      <div className="max-w-[1300px] mx-auto flex flex-col gap-[47px] items-center">
-        {/* HERO CONTENT */}
+    <section className="w-full max-w-[1,175px] mx-auto border bg-white">
+      <div className="max-w-[1,175px] mx-auto flex flex-col gap-[47px] items-center">
         <div className="flex flex-col items-center pt-12 md:pt-20 px-4 sm:px-6 text-center gap-7">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-xs sm:text-sm font-medium">
             <span className="text-green-500">●</span>
             AI underwriting platform for multifamily
           </div>
 
-          {/* Title */}
           <h1 className="text-3xl sm:text-5xl md:text-[72px] font-semibold text-slate-900 leading-[1.1] tracking-tight">
             Your Multifamily <br />
             Analyst, <span className="italic text-slate-800">Unleashed.</span>
           </h1>
 
-          {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-slate-500 max-w-2xl">
             Slung is the AI underwriting platform for investors and brokers.
           </p>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
             <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#4361ee] text-white rounded-lg font-bold text-base sm:text-lg hover:bg-blue-700 transition">
               Start for Free
@@ -51,8 +46,7 @@ export default function Hero() {
 
         {/* PLATFORM SECTION */}
         <section className="w-full flex justify-center bg-white">
-          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-8 pt-12 md:pt-20">
-            {/* Tabs */}
+          <div className="max-w-[1175px] w-full mx-auto px-4 sm:px-6 md:px-8 pt-12 md:pt-20">
             <div className="flex border border-gray-200 rounded overflow-hidden mb-8 md:mb-10">
               <button className="flex-1 py-2 sm:py-3 text-sm sm:text-base text-center bg-slate-50 text-blue-600 font-semibold">
                 For Investors
@@ -65,10 +59,8 @@ export default function Hero() {
               </button>
             </div>
 
-            {/* Content */}
             <div className="flex flex-col lg:flex-row gap-8 w-full">
-              {/* LEFT */}
-              <div className="w-full lg:w-[364px] flex flex-col gap-6 sm:gap-8 justify-start">
+              <div className="w-full lg:w-[550px] flex flex-col gap-6 sm:gap-8 justify-start">
                 <div>
                   <div className="flex justify-between items-center mb-3">
                     <h3 className="text-base sm:text-[18px] font-semibold text-[#4164B0]">
@@ -83,7 +75,7 @@ export default function Hero() {
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-3 sm:gap-4">
+                <div className="flex flex-col gap-4 sm:gap-8">
                   {[
                     { label: 'Live Rent Comps.', num: '02' },
                     { label: 'Excel Export.', num: '03' },
@@ -105,8 +97,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* RIGHT IMAGE */}
-              <div className="relative w-full aspect-[787/379]">
+              <div className="relative w-full aspect-[787/379.228]">
                 <Image
                   src="/PlatformImage.png"
                   alt="Platform Preview"
