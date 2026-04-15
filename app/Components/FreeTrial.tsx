@@ -22,7 +22,7 @@ export default function PrincipalLanding() {
         <span className="text-gray-400 uppercase tracking-widest text-sm">Get Started</span>
       </div>
 
-      <div className="flex w-full md:flex-row flex-col items-center justify-between">
+      <div className="flex w-full md:flex-row flex-col pt-2 md:pt-4 md:gap-0 sm:gap-4 gap-2 items-start justify-between">
         <div className="w-full max-w-5xl">
           <h1 className="font-sans font-semibold text-[48px] text-[#1A1A18] leading-[48px] tracking-[-2.05px] text-left mb-6 max-w-xl">
             Start with a 14-Day <br />

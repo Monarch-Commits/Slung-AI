@@ -21,7 +21,7 @@ export default function Testimonial() {
           </div>
 
           {/* RIGHT TEXT */}
-          <span className="font-syne font-normal text-sm sm:text-[16px] leading-[24px] sm:leading-[30px] text-[#6B6B68] text-left sm:text-center break-words">
+          <span className="font-[Syne] font-normal text-[16px] leading-[30px] tracking-[0em] text-[#6B6B68] text-center break-words">
             What Users Say
           </span>
         </div>
@@ -35,7 +35,7 @@ export default function Testimonial() {
             </span>
           </h2>
 
-          <blockquote className=" w-full font-inter font-semibold text-[32px] leading-[100%] tracking-normal text-[#1e293b] text-center">
+          <blockquote className="w-full max-w-[1218px] font-inter font-semibold text-[32px] leading-[100%] tracking-[0em] text-[#1e293b] text-center">
             We went from underwriting 3 deals a week to 24. Same team. Less hours. With Slung.
           </blockquote>
 
@@ -44,7 +44,7 @@ export default function Testimonial() {
               Jordan Y.
             </cite>
 
-            <p className="font-syne font-normal text-[24px] leading-[20px] text-center text-gray-500">
+            <p className="font-[Syne] font-normal text-[24px] leading-[20px] text-center text-gray-500">
               Associate · Washington D.C.
             </p>
           </div>

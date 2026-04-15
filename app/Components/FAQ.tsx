@@ -63,9 +63,8 @@ export default function FAQ() {
               <div
                 key={index}
                 className={`transition-all duration-300 rounded-lg md:rounded-2xl overflow-hidden ${
-                  isOpen
-                    ? 'bg-[#f8fafc] p-4 md:p-8'
-                    : 'bg-transparent px-4 md:px-8 py-4 md:py-6 border-b border-gray-50'
+                  isOpen ? 'bg-[#f8fafc] p-4 md:p-8' : 'bg-transparent px-4 md:px-8 py-4 md:py-6 '
+                  // border-b border-gray-50
                 }`}
               >
                 <button
@@ -73,7 +72,7 @@ export default function FAQ() {
                   className="w-full flex justify-between items-center text-left"
                 >
                   <span
-                    className={`font-syne font-semibold text-[18px] leading-[27.9px] tracking-normal align-middle transition-colors ${
+                    className={`font-[Syne] font-semibold text-[18px] leading-[27.9px] tracking-normal align-middle transition-colors ${
                       isOpen ? 'text-[#4361ee]' : 'text-[#1e293b]'
                     }`}
                   >
@@ -88,7 +87,7 @@ export default function FAQ() {
                     isOpen ? 'max-h-125 mt-4 md:mt-6 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="font-syne font-normal text-[15px] leading-[24px] tracking-normal text-[#64748b] align-middle">
+                  <p className="font-[Syne] font-normal text-[15px] leading-[24px] tracking-normal text-[#64748b] align-middle">
                     {faq.answer}
                   </p>
                 </div>

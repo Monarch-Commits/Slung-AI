@@ -43,8 +43,11 @@ export default function HowItWorks() {
         </div>
 
         {/* TITLE */}
-        <h2 className="text-3xl md:text-[48px] font-semibold text-[#1e293b] tracking-[-2.05px] leading-[100%]">
-          Three steps to <span className="text-[#4361ee]">Decision Ready Deals</span>
+        <h2 className="font-inter font-semibold text-[48px] leading-[100%] tracking-[-2.05px] text-[#1e293b] text-start">
+          Three steps to{' '}
+          <span className="font-inter font-semibold italic text-[48px] leading-[100%] tracking-[-2.05px] text-[#4361ee] align-middle">
+            Decision Ready Deals
+          </span>
         </h2>
 
         {/* CARDS */}

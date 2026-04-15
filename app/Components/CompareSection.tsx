@@ -73,13 +73,13 @@ export default function CompareSection() {
           <span className="text-gray-400 uppercase tracking-widest text-sm">Compare</span>
         </div>
 
-        <h2 className="text-4xl md:text-6xl font-semibold text-[#0f172a] mb-4">
-          Why others <span className="text-[#4361ee] italic">switch to Slung</span>
+        <h2 className="font-inter font-semibold text-[48px] leading-[100%] tracking-[-2.05px] text-start text-[#0f172a] mb-4">
+          Why others <span className="text-[#4361ee] italic font-semibold">switch to Slung</span>
         </h2>
 
-        <p className="text-gray-500 text-lg">
-          Whether youre evaluating acquisitions or winning listings, Slung is built around your
-          workflow.
+        <p className="font-[Syne] font-normal text-[18px] leading-[27.9px] tracking-[0em] text-gray-500">
+          Whether you&rsquo;re evaluating acquisitions or winning listings, Slung is built around
+          your workflow.
         </p>
       </div>
 
@@ -120,7 +120,9 @@ export default function CompareSection() {
                   <div className="flex items-start gap-[16px]">
                     <Check size={18} className="text-[#22c55e] mt-1 shrink-0" />
                     <div className="flex flex-col text-[#0f172a]">
-                      <div className="font-semibold leading-[27.9px] font-[Syne]">{row.slung}</div>
+                      <div className="font-[Syne] font-semibold text-[18px] leading-[27.9px] tracking-[0em]">
+                        {row.slung}
+                      </div>
                       <div className="font-[Syne] leading-tight text-base">{row.slungSub}</div>
                     </div>
                   </div>

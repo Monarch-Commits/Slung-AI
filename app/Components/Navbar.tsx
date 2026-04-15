@@ -17,7 +17,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-7">
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
           <li>
             <Link href="#platform" className="hover:text-gray-900 transition-colors">
