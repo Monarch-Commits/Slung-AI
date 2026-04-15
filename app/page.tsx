@@ -9,7 +9,7 @@ import WorksWithDocument from './Components/WorksWithDocument';
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-2 sm:px-4 md:px-10 bg-white">
+    <main className="min-h-screen relative px-2 sm:px-4 md:px-10 bg-white">
       <Hero />
       <LogoCloud />
       <Testimonial />

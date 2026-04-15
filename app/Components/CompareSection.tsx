@@ -61,7 +61,7 @@ export default function CompareSection() {
   ];
 
   return (
-    <section className="w-full max-w-[1300px] mx-auto border px-6 md:px-10 py-[100px] flex flex-col items-center gap-6">
+    <section className="w-full max-w-[1300px] mx-auto border px-2 sm:px-6 md:px-10 py-[100px] flex flex-col items-center gap-6">
       {/* HEADER */}
       <div className="w-full max-w-[1218px]">
         <div className="flex items-center justify-between mb-8">

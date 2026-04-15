@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { FileText, Table, LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 
-// ---------------- TYPES ----------------
+// ---------------- COMPONENTS ----------------
 type InputCardProps = {
   icon: LucideIcon;
   color: string;
@@ -23,48 +23,40 @@ type OutputCardProps = {
 const InputCard = ({ icon: Icon, color, bg, size, setRef }: InputCardProps) => (
   <div
     ref={setRef}
-    style={{ width: '56px', height: '71px', borderRadius: '4px', borderWidth: '0.5px' }}
-    className="z-10 flex flex-col items-center justify-center bg-white border-slate-200 shadow-sm gap-1 shrink-0"
+    className="z-10 flex flex-col items-center justify-center bg-white border border-slate-200 shadow-sm gap-1 shrink-0 w-14 h-[71px] rounded"
   >
-    <div className={`flex items-center justify-center w-12 h-12 rounded ${bg}`}>
-      <Icon className={`w-7 h-9 ${color}`} />
+    <div className={`flex items-center justify-center w-10 h-10 rounded ${bg}`}>
+      <Icon className={`w-6 h-6 ${color}`} />
     </div>
-    <span className="text-[9px] text-slate-600">{size}</span>
+    <span className="text-[9px] text-slate-600 font-medium">{size}</span>
   </div>
 );
 
 const OutputCard = ({ value, unit, label, setRef }: OutputCardProps) => (
   <div
     ref={setRef}
-    style={{ width: '93px', height: '71px', borderRadius: '4px', borderWidth: '0.5px' }}
-    className="z-10 flex flex-col items-center justify-center bg-white border-slate-200 shadow-sm gap-px"
+    className="z-10 flex flex-col items-center justify-center bg-white border border-slate-200 shadow-sm gap-px shrink-0 w-24 h-[71px] rounded"
   >
     <div className="flex items-baseline">
-      <span className="text-2xl text-slate-800">{value}</span>
+      <span className="text-xl font-semibold text-slate-800">{value}</span>
       <span className="text-[10px] ml-px text-slate-800">{unit}</span>
     </div>
-    <span className="text-[8px] text-slate-400">{label}</span>
+    <span className="text-[8px] text-slate-400 uppercase tracking-wider">{label}</span>
   </div>
 );
 
-export default function CompactDiagram() {
+// ---------------- MAIN COMPONENT ----------------
+export default function ResponsiveDiagram() {
   const containerRef = useRef<HTMLDivElement>(null);
   const centerRef = useRef<HTMLDivElement>(null);
-
-  const inputRefs: (HTMLDivElement | null)[] = [null, null, null];
-  const outputRefs: (HTMLDivElement | null)[] = [null, null, null];
-
-  const setInputRef = (i: number) => (el: HTMLDivElement | null) => {
-    inputRefs[i] = el;
-  };
-
-  const setOutputRef = (i: number) => (el: HTMLDivElement | null) => {
-    outputRefs[i] = el;
-  };
+  const inputRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const outputRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const [paths, setPaths] = useState<string[]>([]);
+  // State para ma-track ang screen size para sa markers
+  const [isSmUp, setIsSmUp] = useState(true);
 
-  const calculatePaths = () => {
+  const calculatePaths = useCallback(() => {
     if (!containerRef.current || !centerRef.current) return;
 
     const containerRect = containerRef.current.getBoundingClientRect();
@@ -75,82 +67,74 @@ export default function CompactDiagram() {
 
     const newPaths: string[] = [];
 
-    const SIDE_GAP = 6;
-    const CENTER_GAP = 42;
+    const smUp = window.innerWidth >= 640;
+    setIsSmUp(smUp);
 
-    // ---------------- INPUT LINES ----------------
-    inputRefs.forEach((ref) => {
+    const SIDE_GAP = smUp ? 16 : 4;
+    const CENTER_GAP = smUp ? 50 : 35;
+
+    // INPUT LINES
+    inputRefs.current.forEach((ref) => {
       if (!ref) return;
-
       const rect = ref.getBoundingClientRect();
-
       const startX = rect.right - containerRect.left + SIDE_GAP;
       const startY = rect.top - containerRect.top + rect.height / 2;
-
       const endX = centerX - CENTER_GAP;
       const cp1X = startX + (endX - startX) * 0.5;
-
       newPaths.push(
         `M ${startX} ${startY} C ${cp1X} ${startY}, ${cp1X} ${centerY}, ${endX} ${centerY}`
       );
     });
 
-    // ---------------- OUTPUT LINES ----------------
-    outputRefs.forEach((ref) => {
+    // OUTPUT LINES
+    outputRefs.current.forEach((ref) => {
       if (!ref) return;
-
       const rect = ref.getBoundingClientRect();
-
       const startX = centerX + CENTER_GAP;
       const endX = rect.left - containerRect.left - (SIDE_GAP + 4);
       const endY = rect.top - containerRect.top + rect.height / 2;
-
       const cp1X = startX + (endX - startX) * 0.5;
-
       newPaths.push(
         `M ${startX} ${centerY} C ${cp1X} ${centerY}, ${cp1X} ${endY}, ${endX} ${endY}`
       );
     });
 
     setPaths(newPaths);
-  };
-
-  // ---------------- SAFE EFFECT (FIXED) ----------------
-  useEffect(() => {
-    let frame: number;
-
-    const run = () => {
-      frame = requestAnimationFrame(() => {
-        calculatePaths();
-      });
-    };
-
-    run();
-
-    window.addEventListener('resize', run);
-
-    return () => {
-      window.removeEventListener('resize', run);
-      cancelAnimationFrame(frame);
-    };
   }, []);
 
+  useEffect(() => {
+    const observer = new ResizeObserver(() => {
+      requestAnimationFrame(calculatePaths);
+    });
+
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    setTimeout(calculatePaths, 100);
+
+    return () => observer.disconnect();
+  }, [calculatePaths]);
+
   return (
-    <div className="flex items-center justify-center p-2">
+    <div className="max-w-[499px]  mx-auto">
       <div
         ref={containerRef}
-        style={{ width: '499px', height: '243px' }}
-        className="relative flex items-center justify-between rounded-xl overflow-hidden"
+        className="relative flex items-center justify-between bg-white  rounded-3xl border border-slate-100 min-h-[320px] w-full"
       >
         {/* SVG CONNECTIONS */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none">
+        <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
           <defs>
             <marker id="circleDot" markerWidth="6" markerHeight="6" refX="3" refY="3">
-              <circle cx="3" cy="3" r="2" fill="white" stroke="#CBD5E1" />
+              <circle cx="3" cy="3" r="1.5" fill="#CBD5E1" />
             </marker>
-
-            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-              <polygon points="0 0, 8 3, 0 6" fill="#CBD5E1" />
+            <marker
+              id="arrowhead"
+              markerWidth={isSmUp ? '10' : '6'}
+              markerHeight={isSmUp ? '10' : '6'}
+              refX={isSmUp ? '8' : '5'}
+              refY={isSmUp ? '5' : '3'}
+              orient="auto"
+            >
+              <path d={isSmUp ? 'M 0 0 L 8 5 L 0 10 z' : 'M 0 0 L 5 3 L 0 6 z'} fill="#CBD5E1" />
             </marker>
           </defs>
 
@@ -160,31 +144,32 @@ export default function CompactDiagram() {
               d={d}
               fill="none"
               stroke="#E2E8F0"
-              strokeWidth="1"
+              strokeWidth="1.5"
               markerStart="url(#circleDot)"
               markerEnd="url(#arrowhead)"
+              className="transition-[d] duration-300 ease-in-out"
             />
           ))}
         </svg>
 
-        {/* LEFT */}
-        <div className="flex flex-col gap-2">
+        {/* LEFT COLUMN */}
+        <div className="flex flex-col gap-6 sm:gap-10">
           <InputCard
-            setRef={setInputRef(0)}
+            setRef={(el) => (inputRefs.current[0] = el)}
             icon={FileText}
             color="text-rose-500"
             bg="bg-rose-50"
             size="4.2 MB"
           />
           <InputCard
-            setRef={setInputRef(1)}
+            setRef={(el) => (inputRefs.current[1] = el)}
             icon={FileText}
             color="text-blue-500"
             bg="bg-blue-50"
             size="0.9 MB"
           />
           <InputCard
-            setRef={setInputRef(2)}
+            setRef={(el) => (inputRefs.current[2] = el)}
             icon={Table}
             color="text-emerald-600"
             bg="bg-emerald-50"
@@ -192,11 +177,11 @@ export default function CompactDiagram() {
           />
         </div>
 
-        {/* CENTER */}
-        <div ref={centerRef} className="relative z-20 flex items-center justify-center">
-          <div className="w-[70px] h-[70px] rounded-full bg-gray-100 flex items-center justify-center">
-            <div className="w-[58px] h-[58px] rounded-full bg-[#4669B8] flex items-center justify-center overflow-hidden">
-              <div className="relative w-7 h-7">
+        {/* CENTER LOGO */}
+        <div ref={centerRef} className="relative z-20">
+          <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-slate-50 flex items-center justify-center p-2 border border-slate-50 shadow-sm">
+            <div className="w-full h-full rounded-full bg-[#4669B8] flex items-center justify-center overflow-hidden">
+              <div className="relative w-6 h-6 sm:w-10 sm:h-10">
                 <Image
                   src="/slung.png"
                   alt="Logo"
@@ -209,11 +194,26 @@ export default function CompactDiagram() {
           </div>
         </div>
 
-        {/* RIGHT */}
-        <div className="flex flex-col gap-2">
-          <OutputCard setRef={setOutputRef(0)} value="5.82" unit="%" label="Going-In Cap" />
-          <OutputCard setRef={setOutputRef(1)} value="$65.9" unit="M" label="Purchase Price" />
-          <OutputCard setRef={setOutputRef(2)} value="17.1" unit="%" label="5-year IRR" />
+        {/* RIGHT COLUMN */}
+        <div className="flex flex-col gap-6 sm:gap-10">
+          <OutputCard
+            setRef={(el) => (outputRefs.current[0] = el)}
+            value="5.82"
+            unit="%"
+            label="Going-In Cap"
+          />
+          <OutputCard
+            setRef={(el) => (outputRefs.current[1] = el)}
+            value="65.9"
+            unit="M"
+            label="Purchase Price"
+          />
+          <OutputCard
+            setRef={(el) => (outputRefs.current[2] = el)}
+            value="17.1"
+            unit="%"
+            label="5-year IRR"
+          />
         </div>
       </div>
     </div>
