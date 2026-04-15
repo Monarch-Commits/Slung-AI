@@ -115,10 +115,10 @@ export default function ResponsiveDiagram() {
   }, [calculatePaths]);
 
   return (
-    <div className="max-w-[499px]  mx-auto">
+    <div className="w-full max-w-[499px]  mx-auto">
       <div
         ref={containerRef}
-        className="relative flex items-center justify-between bg-white  rounded-3xl border border-slate-100 min-h-[320px] w-full"
+        className="relative flex items-center justify-between min-h-[320px] w-full"
       >
         {/* SVG CONNECTIONS */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
