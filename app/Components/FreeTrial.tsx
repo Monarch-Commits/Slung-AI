@@ -1,4 +1,4 @@
-import CompactDiagram from './Test';
+import CompactDiagram from './Diagram';
 
 export default function PrincipalLanding() {
   return (

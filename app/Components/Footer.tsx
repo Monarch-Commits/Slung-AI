@@ -4,7 +4,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#4466B1] w-full text-white py-14 md:py-16 px-4 sm:px-6 md:px-10 font-sans">
       <div className="max-w-[1300px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 md:gap-12">
-        {/* Logo */}
         <div className="md:col-span-3 flex items-start">
           <div className="relative w-28 h-10">
             <Image
@@ -17,7 +16,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Menu */}
         <div className="md:col-span-2">
           <h3 className="font-semibold text-lg mb-5">Quick Menu</h3>
           <ul className="space-y-3 text-slate-100/90 text-sm">
@@ -31,7 +29,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* About */}
         <div className="md:col-span-2">
           <h3 className="font-semibold text-lg mb-5">About</h3>
           <ul className="space-y-3 text-slate-100/90 text-sm">
@@ -45,7 +42,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Subscribe */}
         <div className="md:col-span-5">
           <h3 className="font-semibold text-lg mb-4">Subscribe</h3>
 

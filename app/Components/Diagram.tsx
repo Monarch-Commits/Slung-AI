@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import { FileText, Table, LucideIcon } from 'lucide-react';
 import Image from 'next/image';
 
-// ---------------- COMPONENTS ----------------
 type InputCardProps = {
   icon: LucideIcon;
   color: string;
@@ -45,7 +44,6 @@ const OutputCard = ({ value, unit, label, setRef }: OutputCardProps) => (
   </div>
 );
 
-// ---------------- MAIN COMPONENT ----------------
 export default function ResponsiveDiagram() {
   const containerRef = useRef<HTMLDivElement>(null);
   const centerRef = useRef<HTMLDivElement>(null);
@@ -53,7 +51,7 @@ export default function ResponsiveDiagram() {
   const outputRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const [paths, setPaths] = useState<string[]>([]);
-  // State para ma-track ang screen size para sa markers
+
   const [isSmUp, setIsSmUp] = useState(true);
 
   const calculatePaths = useCallback(() => {
