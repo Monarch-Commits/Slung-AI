@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/Logo.png"
+            src="/compareLogo.png"
             alt="SlungAI Logo"
             width={114.59}
             height={46}
