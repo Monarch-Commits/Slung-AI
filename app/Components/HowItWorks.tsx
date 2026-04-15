@@ -1,30 +1,7 @@
 import Image from 'next/image';
+import { HowItWorksSteps } from '../Constant';
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      title: 'Upload',
-      description:
-        'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
-      img: '/Cards/card1.png',
-      gradient: 'from-[#dff2ff] via-[#bfe6ff] to-[#4fb3ff]',
-    },
-    {
-      title: 'Model',
-      description:
-        'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection — all included.',
-      img: '/NoImage.png',
-      gradient: 'bg-gradient-to-br from-[#dbeafe] via-[#93c5fd] to-[#6366f1]',
-    },
-    {
-      title: 'Decide',
-      description:
-        'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
-      img: '/NoImage.png',
-      gradient: 'bg-gradient-to-r from-[#4fb3ff] via-[#93c5fd] to-[#dbeafe]',
-    },
-  ];
-
   return (
     <section className="w-full flex justify-center bg-white border-b border-gray-100">
       {/* PARENT */}
@@ -51,14 +28,13 @@ export default function HowItWorks() {
         </h2>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {steps.map((step, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {HowItWorksSteps.map((step, index) => (
             <div
               key={index}
               className="
                 w-full
-                max-w-[390px]
-                min-h-[559px]
+                min-h-[420px] md:min-h-[559px]
                 flex flex-col
                 rounded-[16px]
                 overflow-hidden
