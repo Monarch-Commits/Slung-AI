@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4466B1] text-white py-16 px-8 md:px-20 font-sans">
+    <footer className="bg-[#4466B1] w-full text-white py-16 px-8 md:px-20 font-sans">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
         {/* Logo Section */}
         <div className="md:col-span-3 flex items-start gap-3">
@@ -79,7 +79,7 @@ export default function Footer() {
             Subscribe to our newsletter for exclusive updates, insider tips, and offers delivered
             straight to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col lg:flex-row gap-3">
             <input
               type="email"
               placeholder="Enter your email address"

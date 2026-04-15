@@ -1,81 +1,154 @@
 import { Check, X } from 'lucide-react';
+import Image from 'next/image';
 
 export default function CompareSection() {
   const data = [
-    { label: 'Setup', slung: 'Minutes', legacy: 'Weeks + training' },
-    { label: 'AI Extraction', slung: 'Any format', legacy: 'Manual' },
-    { label: 'Benchmarking', slung: '20,000+ properties', legacy: 'Not supported' },
-    { label: 'Rent Comps', slung: 'Auto-mapped', legacy: 'Additional $XXX/month' },
-    { label: 'Underwriting Model', slung: 'Web + Dynamic Excel', legacy: 'Hard-coded Excel' },
-    { label: 'Time to Insight', slung: '90 seconds', legacy: '30 minutes' },
-    { label: 'Pricing', slung: 'Free Trial, $99/month', legacy: 'Demo, $15,000/year' },
+    {
+      label: 'Setup',
+      slung: 'Minutes',
+      slungSub: 'Upload a document and go',
+      legacy: 'Weeks + training',
+      legacySub: 'Implementation & onboarding required',
+    },
+    {
+      label: 'AI extraction',
+      slung: 'Any format',
+      slungSub: 'PDF, XLSX, CSV — all PMS systems',
+      legacy: 'Manual',
+      legacySub: 'Copy-paste data entry per deal',
+    },
+    {
+      label: 'Benchmarking',
+      slung: '200,000+ properties',
+      slungSub: 'Live peer benchmarks included',
+      legacy: 'Not supported',
+      legacySub: 'No market context built in',
+    },
+    {
+      label: 'Rent comps',
+      slung: 'Auto-mapped',
+      slungSub: 'Pulled live into your model',
+      legacy: 'Additional $XXX/month',
+      legacySub: 'Separate subscription required',
+    },
+    {
+      label: 'Underwriting model',
+      slung: 'Web + dynamic Excel',
+      slungSub: 'Live model, shareable & exportable',
+      legacy: 'Hard-coded Excel',
+      legacySub: 'Static, brittle, hard to share',
+    },
+    {
+      label: 'Time to insight',
+      slung: '90 seconds',
+      legacy: '30+ minutes',
+      legacySub: 'Manual data entry first',
+    },
+    {
+      label: 'Start time',
+      slung: 'Start Now',
+      slungSub: '14 day free trial. No credit card.',
+      legacy: 'Delay Start',
+      legacySub: 'Start in two weeks after demo.',
+    },
+    {
+      label: 'Pricing',
+      slung: '$99/month',
+      slungSub: 'Cancel Anytime.',
+      legacy: '$1,250/month.',
+      legacySub: 'Forced annual contract.',
+    },
   ];
 
   return (
-    <section className="w-full flex justify-center bg-white border-b border-gray-100">
-      <div className="w-full max-w-325.5 px-4 md:px-8 py-16 md:py-24 border-x border-gray-100">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-12">
-          <div className="flex items-center gap-4 md:gap-6">
-            <div className="border border-gray-300 px-3 py-1 text-xs md:text-sm text-gray-500 rounded font-mono">
-              04
+    <section className="w-full max-w-[1300px] mx-auto border px-6 md:px-10 py-[100px] flex flex-col items-center gap-6">
+      {/* HEADER */}
+      <div className="w-full max-w-[1218px]">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-6">
+            <div className="border border-gray-300 px-3 py-1 text-sm text-gray-500 rounded font-mono">
+              03
             </div>
-            <div className="w-10 md:w-12 h-px bg-gray-200"></div>
           </div>
-
-          <span className="text-gray-400 uppercase tracking-widest text-xs md:text-sm">
-            Compare
-          </span>
+          <span className="text-gray-400 uppercase tracking-widest text-sm">Compare</span>
         </div>
 
-        {/* Title */}
-        <h2 className="text-3xl md:text-6xl font-semibold text-[#0f172a] mb-16 tracking-tight text-center">
-          Why others switch to <span className="text-[#4361ee]">Slung</span>
+        <h2 className="text-4xl md:text-6xl font-semibold text-[#0f172a] mb-4">
+          Why others <span className="text-[#4361ee] italic">switch to Slung</span>
         </h2>
 
-        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white relative">
-          {/* Header */}
-          <div className="hidden md:grid grid-cols-3 px-6 py-4 text-sm font-semibold uppercase border-b border-gray-100">
-            <div className="text-left text-gray-400">What it is</div>
+        <p className="text-gray-500 text-lg">
+          Whether youre evaluating acquisitions or winning listings, Slung is built around your
+          workflow.
+        </p>
+      </div>
 
-            <div className="text-center text-[#4361ee] ">Slung</div>
+      {/* TABLE */}
+      <div className="w-full overflow-x-auto pb-4">
+        <div className="w-[1218px] mx-auto flex flex-col">
+          {/* HEADER ROW */}
+          <div className="grid grid-cols-[249px_484.5px_484.5px]">
+            <div className="px-6 py-2"></div>
 
-            <div className="text-center text-gray-400">Legacy Software</div>
+            <div className="flex justify-center items-center py-6 bg-[#DFE5F2] rounded-t">
+              <Image
+                src="/compareLogo.png"
+                alt="SlungAI"
+                width={114.59}
+                height={46}
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            <div className="flex justify-center items-center py-6 font-bold text-slate-800 text-lg">
+              Others
+            </div>
           </div>
 
-          {data.map((row, i) => (
-            <div
-              key={i}
-              className="
-                flex flex-col items-center text-center gap-4
-                md:grid md:grid-cols-3 md:items-center
-                px-4 md:px-6 py-5
-                border-b last:border-b-0 border-gray-100
-                hover:bg-slate-50 transition
-              "
-            >
-              {/* Label */}
-              <div className="text-sm md:text-base font-semibold text-[#0f172a] md:text-left">
-                {row.label}
-              </div>
-
-              <div className="flex items-center justify-center gap-2 text-[#4361ee] font-semibold bg-blue-50/40 md:bg-blue-50/60 py-2 rounded-lg">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 shadow-sm">
-                  <Check size={14} />
+          {/* ROWS */}
+          <div className="flex flex-col border-b border-gray-100">
+            {data.map((row, i) => (
+              <div key={i} className="grid grid-cols-[249px_484.5px_484.5px] w-full group">
+                {/* LABEL */}
+                <div className="h-[76px] border-t border-gray-100 flex items-center px-6 text-[18px] leading-[27.9px] font-semibold text-[#0f172a]">
+                  {row.label}
                 </div>
-                {row.slung}
-              </div>
 
-              {/* Legacy */}
-              <div className="flex items-center justify-center gap-2 text-gray-400">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-gray-100">
-                  <X size={14} />
+                {/* SLUNG */}
+                <div className="h-[76px] border border-white bg-[#DFE5F2] px-[24px] flex items-center">
+                  <div className="flex items-start gap-[16px]">
+                    <Check size={18} className="text-[#22c55e] mt-1 shrink-0" />
+                    <div className="flex flex-col text-[#0f172a]">
+                      <div className="font-semibold leading-[27.9px] font-[Syne]">{row.slung}</div>
+                      <div className="font-[Syne] leading-tight text-base">{row.slungSub}</div>
+                    </div>
+                  </div>
                 </div>
-                {row.legacy}
+
+                {/* LEGACY */}
+                <div className="h-[76px] px-[24px] flex items-center bg-white border-t border-gray-100">
+                  <div className="flex items-start gap-[16px]">
+                    <X size={18} className="text-[#ef4444] mt-1 shrink-0" />
+                    <div className="flex flex-col">
+                      <div className="font-semibold font-[Syne] text-[#0f172a] leading-[27.9px]">
+                        {row.legacy}
+                      </div>
+                      <div className="text-gray-900 font-[Syne] leading-tight">{row.legacySub}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </div>
+
+      {/* BUTTON */}
+      <div className="mt-4">
+        <button className="px-8 py-3 border border-gray-300 rounded-lg font-semibold text-slate-700 hover:bg-gray-50 transition-all">
+          See Our Plans
+        </button>
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ export default function Navbar() {
         </ul>
 
         <button className="px-6 py-2 border-2 border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
-          Custom
+          See Our Plans
         </button>
       </div>
     </nav>
