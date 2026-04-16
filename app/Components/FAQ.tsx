@@ -1,33 +1,16 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { FAQs } from '../Constant';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const faqs = [
-    {
-      question: 'What is Slung ?',
-      answer:
-        'Slung is an AI-powered underwriting platform built specifically for real estate investors and brokers. The platform automates the deal analysis process by instantly extracting property data and applying user-specific memory, such as localized cap rate preferences, directly into the financial model. By digitizing and streamlining these historically manual workflows, Slung accelerates transaction velocity and empowers professionals to evaluate opportunities with unmatched speed and precision.',
-    },
-    {
-      question: 'What document formats do you support?',
-      answer:
-        'We support a wide range of standard real estate documents including PDF, Excel, and CSV...',
-    },
-    {
-      question: 'How is Slung different than using an Excel template?',
-      answer:
-        'Unlike static templates, Slung automates data extraction and applies institutional-grade logic...',
-    },
-  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="w-full flex justify-center bg-white border-b border-gray-100">
+    <section className="w-full flex justify-center bg-white ">
       <div
         className="
       w-[1300px]
@@ -56,7 +39,7 @@ export default function FAQ() {
 
         {/* List */}
         <div className="flex flex-col gap-3 md:gap-4">
-          {faqs.map((faq, index) => {
+          {FAQs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (

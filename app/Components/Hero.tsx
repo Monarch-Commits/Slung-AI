@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-[1,175px] mx-auto border bg-white">
-      <div className="max-w-[1,175px] mx-auto flex flex-col gap-[47px] items-center">
+    <section className="w-full max-w-[1300px] mx-auto border bg-white">
+      <div className="max-w-[1300px] mx-auto flex flex-col gap-[47px] items-center">
         <div className="flex flex-col items-center pt-12 md:pt-20 px-4 sm:px-6 text-center gap-7">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-xs sm:text-sm font-medium">
             <span className="text-green-500">●</span>

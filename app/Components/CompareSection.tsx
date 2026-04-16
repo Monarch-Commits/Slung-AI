@@ -1,65 +1,8 @@
 import { Check, X } from 'lucide-react';
 import Image from 'next/image';
+import { Compare } from '../Constant';
 
 export default function CompareSection() {
-  const data = [
-    {
-      label: 'Setup',
-      slung: 'Minutes',
-      slungSub: 'Upload a document and go',
-      legacy: 'Weeks + training',
-      legacySub: 'Implementation & onboarding required',
-    },
-    {
-      label: 'AI extraction',
-      slung: 'Any format',
-      slungSub: 'PDF, XLSX, CSV — all PMS systems',
-      legacy: 'Manual',
-      legacySub: 'Copy-paste data entry per deal',
-    },
-    {
-      label: 'Benchmarking',
-      slung: '200,000+ properties',
-      slungSub: 'Live peer benchmarks included',
-      legacy: 'Not supported',
-      legacySub: 'No market context built in',
-    },
-    {
-      label: 'Rent comps',
-      slung: 'Auto-mapped',
-      slungSub: 'Pulled live into your model',
-      legacy: 'Additional $XXX/month',
-      legacySub: 'Separate subscription required',
-    },
-    {
-      label: 'Underwriting model',
-      slung: 'Web + dynamic Excel',
-      slungSub: 'Live model, shareable & exportable',
-      legacy: 'Hard-coded Excel',
-      legacySub: 'Static, brittle, hard to share',
-    },
-    {
-      label: 'Time to insight',
-      slung: '90 seconds',
-      legacy: '30+ minutes',
-      legacySub: 'Manual data entry first',
-    },
-    {
-      label: 'Start time',
-      slung: 'Start Now',
-      slungSub: '14 day free trial. No credit card.',
-      legacy: 'Delay Start',
-      legacySub: 'Start in two weeks after demo.',
-    },
-    {
-      label: 'Pricing',
-      slung: '$99/month',
-      slungSub: 'Cancel Anytime.',
-      legacy: '$1,250/month.',
-      legacySub: 'Forced annual contract.',
-    },
-  ];
-
   return (
     <section className="w-full max-w-[1300px] mx-auto border px-2 sm:px-6 md:px-10 py-[100px] flex flex-col items-center gap-6">
       {/* HEADER */}
@@ -108,7 +51,7 @@ export default function CompareSection() {
 
           {/* ROWS */}
           <div className="flex flex-col border-b border-gray-100">
-            {data.map((row, i) => (
+            {Compare.map((row, i) => (
               <div key={i} className="grid grid-cols-[249px_484.5px_484.5px] w-full group">
                 {/* LABEL */}
                 <div className="h-[76px] border-t border-gray-100 flex items-center px-6 text-[18px] leading-[27.9px] font-semibold text-[#0f172a]">
@@ -117,10 +60,12 @@ export default function CompareSection() {
 
                 {/* SLUNG */}
                 <div className="h-[76px] border border-white bg-[#DFE5F2] px-[24px] flex items-center">
-                  <div className="flex items-start gap-[16px]">
-                    <Check size={18} className="text-[#22c55e] mt-1 shrink-0" />
+                  <div className="flex items-start gap-[4px]">
+                    <Check size={18} className="text-[#18B007] mt-1 shrink-0" />
                     <div className="flex flex-col text-[#0f172a]">
-                      <div className="font-[Syne] font-semibold text-[18px] leading-[27.9px] tracking-[0em]">
+                      <div
+                        className={`font-[Syne] font-semibold text-[18px] leading-[27.9px] ${row.color?.color1} tracking-[0em]`}
+                      >
                         {row.slung}
                       </div>
                       <div className="font-[Syne] leading-tight text-base">{row.slungSub}</div>
@@ -130,10 +75,12 @@ export default function CompareSection() {
 
                 {/* LEGACY */}
                 <div className="h-[76px] px-[24px] flex items-center bg-white border-t border-gray-100">
-                  <div className="flex items-start gap-[16px]">
-                    <X size={18} className="text-[#ef4444] mt-1 shrink-0" />
+                  <div className="flex items-start gap-[4px]">
+                    <X size={18} className="text-[#E00000] mt-1 shrink-0" />
                     <div className="flex flex-col">
-                      <div className="font-semibold font-[Syne] text-[#0f172a] leading-[27.9px]">
+                      <div
+                        className={`font-semibold font-[Syne] text-[#0f172a] ${row.color?.color2} leading-[27.9px]`}
+                      >
                         {row.legacy}
                       </div>
                       <div className="text-gray-900 font-[Syne] leading-tight">{row.legacySub}</div>

@@ -13,7 +13,7 @@ import { IoMenuSharp } from 'react-icons/io5';
 
 export default function MobileNavbar() {
   return (
-    <div className="flex items-center md:hidden justify-center ">
+    <div className="flex items-center lg:hidden justify-center ">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon" aria-label="Open menu">

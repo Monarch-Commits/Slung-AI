@@ -3,7 +3,6 @@ import React from 'react';
 export default function Testimonial() {
   return (
     <section className="w-full flex justify-center bg-white">
-      {/* OUTER FRAME */}
       <div
         className="w-full max-w-[1300px] border border-slate-200
                    px-6 sm:px-10 md:px-[42px]
@@ -11,9 +10,7 @@ export default function Testimonial() {
                    flex flex-col gap-6
                    min-h-[420px] md:min-h-[490px]"
       >
-        {/* HEADER (FIXED FOR 807px OVERLAP) */}
         <div className="flex justify-between gap-3 w-full">
-          {/* LEFT SIDE (01) */}
           <div className="flex items-center  gap-4">
             <div className="border border-gray-300 px-3 py-1 text-sm text-gray-500 rounded font-mono">
               01

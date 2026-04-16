@@ -3,7 +3,10 @@ import { HowItWorksSteps } from '../Constant';
 
 export default function HowItWorks() {
   return (
-    <section className="w-full flex justify-center bg-white border-b border-gray-100">
+    <section
+      id="how-it-works"
+      className="w-full flex justify-center bg-white border-b border-gray-100"
+    >
       {/* PARENT */}
       <div className="w-full max-w-[1300px] border-t border-x border-gray-200 px-6 md:px-10 py-[100px] flex flex-col gap-6">
         {/* HEADER */}
