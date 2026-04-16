@@ -43,7 +43,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className}  h-full  antialiased`}
     >
-      <body className="min-h-full flex flex-col relative">
+      <body className="min-h-full w-full flex flex-col relative">
         <NavbarWrapper />
         {children}
         <Footer />

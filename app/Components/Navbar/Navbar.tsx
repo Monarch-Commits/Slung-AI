@@ -5,9 +5,8 @@ import MobileNavbar from './MobileNav';
 
 export default function Navbar() {
   return (
-    <nav className="flex  w-full  bg-white border border-gray-100">
-      {/* Logo Section */}
-      <div className="max-w-[1300px]  mx-auto  flex items-center  justify-between py-4 px-2 sm:px-10 w-full">
+    <nav className="w-full border bg-white">
+      <div className="max-w-[1300px] mx-auto px-2 sm:px-4 md:px-10 xl:px-0 flex  items-center justify-between py-4 border-gray-100">
         <Link href="/">
           <Image
             src="/LogoNav.png"
@@ -29,11 +28,10 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button className="sm:px-[12px] py-2 px-3 sm:py-[4px]  border-2  md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px] border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
+          <button className="sm:px-[12px] py-2 px-3 sm:py-[4px] md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px] border-2 border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
             See Our Plans
           </button>
 
-          {/* Mobile Menu */}
           <MobileNavbar />
         </div>
       </div>

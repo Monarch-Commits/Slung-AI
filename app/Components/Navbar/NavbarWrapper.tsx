@@ -60,7 +60,7 @@ export default function NavbarWrapper() {
 
   return (
     <div
-      className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`sticky top-0 left-0 w-full mx-auto z-50 transition-all duration-300 ${
         show ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
