@@ -25,7 +25,7 @@ export default function HowItWorks() {
         {/* TITLE */}
         <h2 className="font-inter font-semibold text-[48px] leading-[100%] tracking-[-2.05px] text-[#1e293b] text-start">
           Three steps to{' '}
-          <span className="font-inter font-semibold italic text-[48px] leading-[100%] tracking-[-2.05px] text-[#4361ee] align-middle">
+          <span className="font-inter font-semibold italic text-[48px] leading-[100%] tracking-[-2.05px] text-[#4361ee] ">
             Decision Ready Deals
           </span>
         </h2>

@@ -10,19 +10,19 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '',
+        hostname: '#',
       },
       {
         protocol: 'https',
-        hostname: '',
+        hostname: '#',
       },
       {
         protocol: 'https',
-        hostname: '',
+        hostname: '#',
       },
       {
         protocol: 'https',
-        hostname: '',
+        hostname: '#',
       },
     ],
   },
