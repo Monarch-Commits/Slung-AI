@@ -22,14 +22,14 @@ export default function Navbar() {
           <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-600">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="hover:text-gray-900 transition-colors">
+                <Link href={link.href} className="hover:text-blue-900 transition-colors">
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
 
-          <button className="sm:px-6 py-2 px-3 sm:py-1 border-2 border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
+          <button className="sm:px-[12px] py-2 px-3 sm:py-[4px]  border-2  md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px] border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
             See Our Plans
           </button>
 

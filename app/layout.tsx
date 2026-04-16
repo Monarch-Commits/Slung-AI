@@ -5,7 +5,7 @@ import './globals.css';
 
 import Footer from './Components/Footer';
 import { Syne } from 'next/font/google';
-import Navbar from './Components/Navbar/Navbar';
+import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 
 const syne = Syne({
   subsets: ['latin'],
@@ -41,10 +41,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className} h-full  antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className}  h-full  antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Navbar />
+      <body className="min-h-full flex flex-col relative">
+        <NavbarWrapper />
         {children}
         <Footer />
       </body>

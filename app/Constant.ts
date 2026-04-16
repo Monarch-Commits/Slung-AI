@@ -1,10 +1,10 @@
 // Navigation links for the Navbar component
 export const NAV_LINKS = [
-  { label: 'Platform', href: '#platform' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Sign In', href: '#' },
+  { label: 'Platform', href: '/#platform' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'Sign In', href: '/#sign-in' },
 ];
 
 // Data for the How It Works section

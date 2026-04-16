@@ -1,6 +1,6 @@
 import CompactDiagram from './Diagram';
 
-export default function PrincipalLanding() {
+export default function Trial() {
   return (
     <div
       id="pricing"
