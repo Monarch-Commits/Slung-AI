@@ -36,7 +36,10 @@ export default function Platform() {
   return (
     <>
       {/* PLATFORM SECTION */}
-      <section id="platform" className="w-full flex justify-center border-b border-x bg-white">
+      <section
+        id="platform"
+        className="w-full flex max-w-[1300px] mx-auto justify-center border-b border-x bg-white"
+      >
         <div className="max-w-[1175px] w-full mx-auto px-4 sm:px-6 md:px-8 pt-12 md:pt-20">
           <div className="flex border border-gray-200 rounded overflow-hidden mb-8 md:mb-10">
             <button className="flex-1 py-2 sm:py-3 text-sm sm:text-base text-center bg-slate-50 text-blue-600 font-semibold">
