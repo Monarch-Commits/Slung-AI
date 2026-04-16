@@ -95,7 +95,7 @@ export default function CompareSection() {
 
       {/* BUTTON */}
       <div className="mt-4">
-        <button className="px-8 py-3 border border-gray-300 rounded-lg font-semibold text-slate-700 hover:bg-gray-50 transition-all">
+        <button className="px-8 py-3 border border-gray-300 rounded-lg font-semibold  hover:bg-gray-50 transition-all">
           See Our Plans
         </button>
       </div>

@@ -56,14 +56,14 @@ export default function HowItWorks() {
 
               {/* IMAGE AREA */}
               <div
-                className={`flex-1 flex items-center justify-center bg-linear-to-b ${step.gradient}`}
+                className={`flex-1 flex items-center relative justify-center bg-linear-to-b ${step.gradient}`}
               >
                 {/* <Image
                   src={step.img}
                   alt={step.title}
-                  width={140}
-                  height={140}
-                  className="object-contain opacity-40"
+                  width={203}
+                  height={339}
+                  className="object-contain bottom-0 absolute"
                 /> */}
               </div>
             </div>

@@ -16,7 +16,10 @@ export default function Hero() {
       <div className="max-w-[1300px] mx-auto flex flex-col gap-[47px] items-center">
         <div className="flex flex-col items-center pt-12 md:pt-20 px-4 sm:px-6 text-center gap-7">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-xs sm:text-sm font-medium">
-            <span className="text-green-500">●</span>
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            </span>
             AI underwriting platform for multifamily
           </div>
 

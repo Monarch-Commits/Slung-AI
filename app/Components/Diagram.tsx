@@ -177,7 +177,7 @@ export default function ResponsiveDiagram() {
 
         {/* CENTER LOGO */}
         <div ref={centerRef} className="relative z-20">
-          <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-slate-50 flex items-center justify-center p-2 border border-slate-50 shadow-sm">
+          <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-slate-300 flex items-center justify-center p-2 border border-slate-50 shadow-sm">
             <div className="w-full h-full rounded-full bg-[#4669B8] flex items-center justify-center overflow-hidden">
               <div className="relative w-6 h-6 sm:w-10 sm:h-10">
                 <Image
