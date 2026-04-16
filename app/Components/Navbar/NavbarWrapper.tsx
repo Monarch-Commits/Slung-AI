@@ -9,7 +9,7 @@ export default function NavbarWrapper() {
   const lastScrollY = useRef(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const HERO_HEIGHT = 300;
+  const HERO_HEIGHT = 700;
   const SCROLL_THRESHOLD = 5;
 
   useEffect(() => {
