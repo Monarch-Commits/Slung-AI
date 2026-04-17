@@ -38,17 +38,17 @@ export default function Platform() {
       {/* PLATFORM SECTION */}
       <section
         id="platform"
-        className="w-full flex max-w-[1300px] mx-auto justify-center border-b border-x bg-white"
+        className="w-full flex mx-auto justify-center border-b border-x bg-white"
       >
-        <div className="max-w-[1175px] w-full mx-auto px-4 sm:px-6 md:px-8 pt-12 md:pt-20">
+        <div className=" w-full mx-auto px-4 sm:px-6 md:px-8 pt-12 md:pt-20">
           <div className="flex border border-gray-200 rounded overflow-hidden mb-8 md:mb-10">
-            <button className="flex-1 py-2 sm:py-3 text-sm sm:text-base text-center bg-slate-50 text-blue-600 font-semibold">
+            <button className="flex-1 bg-[#4164B00F] text-[#4164B0] p-[10px] font-[Syne] font-normal text-[18px] leading-[27.9px] text-center">
               For Investors
             </button>
 
             <div className="w-px bg-gray-200" />
 
-            <button className="flex-1 py-2 sm:py-3 text-sm sm:text-base text-center text-gray-400 hover:bg-slate-50 hover:text-blue-600 transition">
+            <button className="flex-1 font-[Syne] font-normal text-[18px] p-[10px] leading-[27.9px] text-center text-[##6B6B68] opacity-60 hover:bg-slate-50 hover:text-[#4164B0] transition">
               For Brokers
             </button>
           </div>
@@ -63,24 +63,29 @@ export default function Platform() {
                     <div key={item.id} onClick={() => setActiveTab(item.id)}>
                       <div className="flex justify-between items-center mb-3">
                         <span
-                          className={`text-sm sm:text-[18px] font-semibold  group-hover:text-slate-700 ${isActive ? 'text-[#4164B0]' : 'text-slate-400'}`}
+                          className={`font-[Inter] font-semibold text-[18px] leading-[27.9px] ${
+                            isActive ? 'text-[#4164B0]' : 'text-slate-400'
+                          }`}
                         >
                           {item.label}
                         </span>
 
                         <span
-                          className={`text-xs sm:text-base font-mono group-hover:text-slate-500 ${isActive ? 'text-[#6B6B68]' : 'text-gray-300'}`}
+                          className={`font-mono text-xs sm:text-base ${
+                            isActive ? 'text-[#6B6B68]' : 'text-gray-300'
+                          }`}
                         >
                           {item.id}
                         </span>
                       </div>
+
                       <AnimatePresence>
                         {isActive && (
                           <motion.p
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            className="text-[#64748b] text-sm sm:text-[16px] leading-relaxed"
+                            className="font-[Syne] font-normal text-[16px] leading-[27.9px] text-[#64748b]"
                           >
                             {item.description}
                           </motion.p>

@@ -1,32 +1,40 @@
 export default function Hero() {
   return (
-    <section className="w-full max-w-[1300px] mx-auto border-x bg-white">
-      <div className="max-w-[1300px] mx-auto flex flex-col gap-[47px] items-center">
+    <section className="w-full">
+      <div className="max-w-[1040px] border-x mx-auto flex flex-col items-center gap-12">
         <div className="flex flex-col items-center pt-12 md:pt-20 px-4 sm:px-6 text-center gap-7">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-slate-100 text-slate-600 text-xs sm:text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-100">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
-            AI underwriting platform for multifamily
+
+            <span className="font-inter font-normal text-[13px] leading-[20.8px] align-middle text-slate-600">
+              AI underwriting platform for multifamily
+            </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-[72px] font-semibold text-slate-900 leading-[1.1] tracking-tight">
+          <h1 className="font-inter text-[64px] font-semibold leading-[68px] tracking-[-2.05px] text-slate-900 text-center max-w-[867px]">
             Your Multifamily <br />
-            Analyst, <span className="italic text-slate-800">Unleashed.</span>
+            Analyst, <span className="italic text-[#4164b0]">Unleashed.</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-500 max-w-2xl">
+          <p className="font-[Syne] font-normal text-[24px] leading-[30px] text-center text-[#6B6B68] max-w-2xl mx-auto">
             Slung is the AI underwriting platform for investors and brokers.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-            <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-[#4361ee] text-white rounded-lg font-bold text-base sm:text-lg hover:bg-blue-700 transition">
-              Start for Free
+          <div className="flex flex-col sm:flex-row gap-[16px] sm:gap-[32px] w-[330px] sm:w-auto">
+            {/* Primary Button */}
+            <button className="bg-[#4164B0] px-[24px] py-[10px] rounded-[8px]">
+              <span className="font-[Inter] font-medium text-[16px] leading-[25.6px] text-white text-center">
+                Start for Free
+              </span>
             </button>
 
-            <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-white border border-slate-200 text-slate-900 rounded-lg font-bold text-base sm:text-lg hover:bg-slate-50 transition">
-              Book a demo
+            <button className="border-2  px-[24px] py-[10px] rounded-[8px]">
+              <span className="font-[Inter] font-medium text-[16px] leading-[25.6px] text-[#1A1A18] text-center">
+                Book a demo
+              </span>
             </button>
           </div>
 

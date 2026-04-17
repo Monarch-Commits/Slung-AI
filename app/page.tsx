@@ -10,16 +10,19 @@ import WorksWithDocument from './Components/WorksWithDocument';
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative px-2 sm:px-4 md:px-10 bg-white">
-      <Hero />
-      <Platform />
-      <LogoCloud />
-      <Testimonial />
-      <HowItWorks />
-      <WorksWithDocument />
-      <CompareSection />
-      <FAQ />
-      <FreeTrial />
+    <main className="min-h-screen bg-white">
+      {/* SINGLE CONSISTENT CONTAINER SYSTEM */}
+      <div className="max-w-[1040px] mx-auto px-4 sm:px-6 md:px-10 lg:px-[69px]">
+        <Hero />
+        <Platform />
+        <LogoCloud />
+        <Testimonial />
+        <HowItWorks />
+        <WorksWithDocument />
+        <CompareSection />
+        <FAQ />
+        <FreeTrial />
+      </div>
     </main>
   );
 }
