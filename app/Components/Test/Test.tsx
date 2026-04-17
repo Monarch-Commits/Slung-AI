@@ -1,10 +1,12 @@
 'use client';
+
 import { useState } from 'react';
-import Collaborate from './Investors/Collaborate';
+
 import { AnimatePresence, motion } from 'framer-motion';
-import UploadAndRewrite from './Investors/UploadAndRewrite';
-import LiveRent from './Investors/LiveRent';
-import ExcelExport from './Investors/ExcelExport';
+import UploadAndRewrite from '../Investors/UploadAndRewrite';
+import LiveRent from '../Investors/LiveRent';
+import ExcelExport from '../Investors/ExcelExport';
+import Collaborate from '../Investors/Collaborate';
 
 const features = [
   {
@@ -32,31 +34,63 @@ const features = [
 ];
 
 export default function Platform() {
+  const [activeUser, setActiveUser] = useState<'investors' | 'brokers'>('investors');
   const [activeTab, setActiveTab] = useState('01');
+
+  const investorComponents: Record<string, React.ReactNode> = {
+    '01': <UploadAndRewrite />,
+    '02': <LiveRent />,
+    '03': <ExcelExport />,
+    '04': <Collaborate />,
+  };
+
+  const brokerComponents: Record<string, React.ReactNode> = {
+    '01': <Collaborate />,
+    '02': <Collaborate />,
+    '03': <Collaborate />,
+    '04': <div />,
+  };
+
+  const featuresData = activeUser === 'investors' ? features : features;
+
+  const components = activeUser === 'investors' ? investorComponents : brokerComponents;
+
+  const handleUserChange = (type: 'investors' | 'brokers') => {
+    setActiveUser(type);
+    setActiveTab('01');
+  };
+
   return (
     <>
-      {/* PLATFORM SECTION */}
       <section
         id="platform"
         className="mx-auto flex w-full justify-center border-x border-b bg-white"
       >
         <div className="mx-auto w-full px-4 pt-12 sm:px-6 md:px-8 md:pt-20">
+          {/* TOGGLE */}
           <div className="mb-8 flex overflow-hidden rounded border border-gray-200 md:mb-10">
-            <button className="flex-1 bg-[#4164B00F] p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal text-[#4164B0]">
+            <button
+              onClick={() => handleUserChange('investors')}
+              className="flex-1 bg-[#4164B00F] p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal text-[#4164B0]"
+            >
               For Investors
             </button>
 
             <div className="w-px bg-gray-200" />
 
-            <button className="flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal text-[##6B6B68] opacity-60 transition hover:bg-slate-50 hover:text-[#4164B0]">
+            <button
+              onClick={() => handleUserChange('brokers')}
+              className="flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal text-[##6B6B68] opacity-60 transition hover:bg-slate-50 hover:text-[#4164B0]"
+            >
               For Brokers
             </button>
           </div>
 
           <div className="flex w-full flex-col gap-[24px] lg:flex-row">
+            {/* LEFT */}
             <div className="flex w-full flex-col justify-start gap-6 sm:gap-[32px] lg:w-[400px]">
               <div className="flex flex-col gap-8 sm:gap-8">
-                {features.map((item) => {
+                {featuresData.map((item) => {
                   const isActive = activeTab === item.id;
 
                   return (
@@ -97,19 +131,17 @@ export default function Platform() {
               </div>
             </div>
 
+            {/* RIGHT */}
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeTab}
+                key={`${activeUser}-${activeTab}`}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
                 className="relative aspect-[787/600] w-full max-w-[700px] rounded-lg sm:w-[90%] md:w-[80%]"
               >
-                {activeTab === '01' && <UploadAndRewrite />}
-                {activeTab === '02' && <LiveRent />}
-                {activeTab === '03' && <ExcelExport />}
-                {activeTab === '04' && <Collaborate />}
+                {components[activeTab]}
               </motion.div>
             </AnimatePresence>
           </div>

@@ -24,7 +24,7 @@ export default function LiveRent() {
         "
       >
         <Image
-          src="/Investors/liveRent.png"
+          src="/Investors/LiveRent.png"
           alt="Live Rent Model"
           fill
           className="object-cover object-top"

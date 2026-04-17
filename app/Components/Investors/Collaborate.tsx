@@ -18,7 +18,7 @@ export default function Collaborate() {
         <div className="absolute border border-white rounded-full w-[400px] h-[400px]" />
       </div>
 
-      <div className="z-10 absolute -bottom-2 left-6 bg-white  ring-6 ring-gray-300/50  w-full max-w-[371px] rounded-t-3xl shadow-2xl ">
+      <div className="z-10 absolute -bottom-30 sm:-bottom-2 left-2 sm:left-6 bg-white  ring-6 ring-gray-300/50  w-full max-w-[250px] sm:max-w-[371px] rounded-t-3xl shadow-2xl ">
         <div className="flex justify-end w-full relative items-center px-4 border-b-4 py-4 gap-[18px] mb-10">
           <div className="flex -space-x-4">
             {[1, 2, 3, 4].map((i) => (

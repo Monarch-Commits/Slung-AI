@@ -5,47 +5,41 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="w-full flex justify-center bg-white border-b border-gray-100"
+      className="flex w-full justify-center border-b border-gray-100 bg-white"
     >
       {/* PARENT */}
-      <div className="w-full max-w-[1300px] border-t border-x border-gray-200 px-6 md:px-10 py-[100px] flex flex-col gap-6">
+      <div className="flex w-full flex-col gap-6 border-x border-t border-gray-200 px-6 py-[100px] md:px-10">
         {/* HEADER */}
 
-        <div className="flex w-full items-center justify-between mb-8">
+        <div className="mb-8 flex w-full items-center justify-between">
           <div className="flex items-center gap-6">
-            <div className="border border-gray-300 px-3 py-1 text-[16px] leading-[30px] text-center text-gray-500 rounded font-[Syne] font-normal tracking-normal">
+            <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-gray-500">
               02
             </div>
           </div>
-          <span className="font-[Syne] font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#6B6B68]">
+          <span className="text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
             How It Works
           </span>
         </div>
 
         {/* TITLE */}
-        <h2 className="font-[Inter] font-semibold text-[48px] leading-none tracking-[-2.05px] text-[#1e293b] text-start">
+        <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">
           Three steps to{' '}
-          <span className="font-[Inter] font-semibold italic text-[48px] leading-none tracking-[-2.05px] text-[#4164B0] ">
+          <span className="font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#4164B0] italic">
             Decision Ready Deals
           </span>
         </h2>
 
         {/* CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3">
           {HowItWorksSteps.map((step, index) => (
             <div
               key={index}
-              className="
-                w-full
-                min-h-[420px] md:min-h-[559px]
-                flex flex-col
-                rounded-[16px]
-                overflow-hidden
-              "
+              className="flex h-[500px] w-full flex-col gap-[16px] overflow-hidden rounded-b-[16px] md:h-[559px]"
             >
               {/* TEXT */}
-              <div className="p-6 md:p-8 flex flex-col gap-4">
-                <h3 className="font-[Inter] font-semibold text-[32px] leading-[27.9px] tracking-normal text-[#1e293b]">
+              <div className="flex h-[30%] flex-col gap-4 p-6 md:p-8">
+                <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1e293b]">
                   {step.title}
                 </h3>
 
@@ -56,14 +50,14 @@ export default function HowItWorks() {
 
               {/* IMAGE AREA */}
               <div
-                className={`flex-1 flex items-center relative justify-center bg-linear-to-b ${step.gradient}`}
+                className={`relative h-[60%] w-full overflow-hidden rounded-b-lg border bg-linear-to-b ${step.gradient}`}
               >
                 <Image
                   src={step.img}
                   alt={step.title}
-                  width={203}
-                  height={339}
-                  className="object-contain bottom-0 absolute"
+                  fill
+                  className={`object-contain object-bottom ${step.s}`}
+                  quality={100}
                 />
               </div>
             </div>
