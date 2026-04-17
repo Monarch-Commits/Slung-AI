@@ -53,8 +53,8 @@ export default function Platform() {
             </button>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 w-full">
-            <div className="w-full lg:w-[550px] flex flex-col gap-6 sm:gap-8 justify-start">
+          <div className="flex flex-col lg:flex-row gap-[24px] w-full">
+            <div className="w-full lg:w-[400px] flex flex-col gap-6 sm:gap-[32px] justify-start">
               <div className="flex flex-col gap-8 sm:gap-8">
                 {features.map((item) => {
                   const isActive = activeTab === item.id;
@@ -63,15 +63,15 @@ export default function Platform() {
                     <div key={item.id} onClick={() => setActiveTab(item.id)}>
                       <div className="flex justify-between items-center mb-3">
                         <span
-                          className={`font-[Inter] font-semibold text-[18px] leading-[27.9px] ${
-                            isActive ? 'text-[#4164B0]' : 'text-slate-400'
+                          className={`font-[Inter]  text-[18px] leading-[27.9px] ${
+                            isActive ? 'text-[#4164B0] font-semibold' : 'text-slate-400'
                           }`}
                         >
                           {item.label}
                         </span>
 
                         <span
-                          className={`font-mono text-xs sm:text-base ${
+                          className={`font-[Syne] text-xs sm:text-[16px] ${
                             isActive ? 'text-[#6B6B68]' : 'text-gray-300'
                           }`}
                         >
@@ -104,7 +104,7 @@ export default function Platform() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
-                className="relative rounded-lg w-full aspect-[787/379]"
+                className="relative rounded-lg w-full sm:w-[90%] md:w-[80%] max-w-[700px] aspect-[787/600]"
               >
                 {activeTab === '01' && <UploadAndRewrite />}
                 {activeTab === '02' && <LiveRent />}

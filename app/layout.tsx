@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import './globals.css';
-
 import Footer from './Components/Footer';
 import { Syne } from 'next/font/google';
 import NavbarWrapper from './Components/Navbar/NavbarWrapper';
@@ -43,10 +42,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className}  h-full  antialiased`}
     >
-      <body className="min-h-full w-full flex flex-col relative">
+      <body className="min-h-full  w-full flex flex-col ">
         <NavbarWrapper />
         {children}
-        <Footer />
+
+        <main className="bg-[#4466B1]  text-white py-14 md:py-16 font-sans">
+          <Footer />
+        </main>
       </body>
     </html>
   );

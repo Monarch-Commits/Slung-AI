@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Footer() {
+export default function Test() {
   return (
     <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-6 md:px-10 lg:px-[69px]">
       <div className="max-w-[1140px] w-full mx-auto grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-5">

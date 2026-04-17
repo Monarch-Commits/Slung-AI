@@ -10,7 +10,7 @@ const avatars = [
 
 export default function Collaborate() {
   return (
-    <div className="relative w-full h-[500px] bg-linear-to-br  from-blue-400 rounded-t-xl to-blue-100 overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-full  bg-linear-to-br  from-blue-400 rounded-t-xl to-blue-100 overflow-hidden flex items-center justify-center">
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
         <div className="absolute border border-white rounded-full w-[100px] h-[100px]" />
         <div className="absolute border border-white rounded-full w-[200px] h-[200px]" />

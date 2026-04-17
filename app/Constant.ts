@@ -116,6 +116,7 @@ export const Compare = [
   {
     label: 'Time to insight',
     slung: '90 seconds',
+    slungSub: 'First look at the deal',
     legacy: '30+ minutes',
     legacySub: 'Manual data entry first',
   },

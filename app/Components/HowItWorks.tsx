@@ -58,13 +58,13 @@ export default function HowItWorks() {
               <div
                 className={`flex-1 flex items-center relative justify-center bg-linear-to-b ${step.gradient}`}
               >
-                {/* <Image
+                <Image
                   src={step.img}
                   alt={step.title}
                   width={203}
                   height={339}
                   className="object-contain bottom-0 absolute"
-                /> */}
+                />
               </div>
             </div>
           ))}
