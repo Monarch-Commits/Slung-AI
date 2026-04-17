@@ -4,25 +4,25 @@ import { Compare } from '../Constant';
 
 export default function CompareSection() {
   return (
-    <section className="w-full max-w-[1170px] mx-auto border px-4 sm:px-6 md:px-10 py-[60px] md:py-[100px] flex flex-col items-center gap-6">
+    <section className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-6 border px-4 py-[60px] sm:px-6 md:px-10 md:py-[100px]">
       {/* HEADER */}
       <div className="w-full">
-        <div className="flex w-full items-center justify-between mb-8">
+        <div className="mb-8 flex w-full items-center justify-between">
           <div className="flex items-center gap-6">
-            <div className="border border-gray-300 px-3 py-1 text-[16px] leading-[30px] text-center text-gray-500 rounded font-[Syne] font-normal tracking-normal">
+            <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-gray-500">
               03
             </div>
           </div>
-          <span className="font-[Syne] font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#6B6B68]">
+          <span className="text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
             Compare
           </span>
         </div>
 
-        <h2 className="font-[Inter] font-semibold text-[32px] md:text-[48px] leading-tight md:leading-none tracking-[-1px] md:tracking-[-2.05px] text-start text-[#0f172a] mb-4">
+        <h2 className="mb-4 text-start font-[Inter] text-[32px] leading-tight font-semibold tracking-[-1px] text-[#0f172a] md:text-[48px] md:leading-none md:tracking-[-2.05px]">
           Why others <span className="text-[#4164B0] italic">switch to Slung</span>
         </h2>
 
-        <p className="font-[Syne] font-normal text-[16px] md:text-[18px] leading-[24px] md:leading-[27.9px] tracking-normal text-[#6B6B68]">
+        <p className="font-[Syne] text-[16px] leading-[24px] font-normal tracking-normal text-[#6B6B68] md:text-[18px] md:leading-[27.9px]">
           Whether you&rsquo;re evaluating acquisitions or winning listings, Slung is built around
           your workflow.
         </p>
@@ -30,12 +30,12 @@ export default function CompareSection() {
 
       {/* TABLE */}
       <div className="w-full">
-        <div className="w-full flex flex-col">
+        <div className="flex w-full flex-col">
           {/* HEADER ROW - Hidden on mobile, Flex on Desktop */}
-          <div className="hidden md:grid md:grid-cols-[1fr_1.8fr_1.8fr] w-full">
+          <div className="hidden w-full md:grid md:grid-cols-[1fr_1.8fr_1.8fr]">
             <div className="px-6 py-2"></div>
 
-            <div className="flex justify-center items-center py-6 bg-[#DFE5F2] rounded-t">
+            <div className="flex items-center justify-center rounded-t bg-[#BBCEF7] py-6">
               <Image
                 src="/compareLogo.png"
                 alt="SlungAI"
@@ -46,7 +46,7 @@ export default function CompareSection() {
               />
             </div>
 
-            <div className="flex justify-center items-center py-6 font-bold text-slate-800 text-lg">
+            <div className="flex items-center justify-center py-6 text-lg font-bold text-slate-800">
               Others
             </div>
           </div>
@@ -56,27 +56,27 @@ export default function CompareSection() {
             {Compare.map((row, i) => (
               <div
                 key={i}
-                className="flex flex-col md:grid md:grid-cols-[1fr_1.8fr_1.8fr] w-full group border-t border-gray-100 md:border-t-0"
+                className="group flex w-full flex-col border-t border-gray-100 md:grid md:grid-cols-[1fr_1.8fr_1.8fr] md:border-t-0"
               >
                 {/* LABEL - Full width on mobile */}
-                <div className="min-h-[50px] md:h-[76px] md:border-t border-gray-100 flex items-center font-[Inter] font-semibold text-[16px] md:text-[18px] leading-tight md:leading-[27.9px] text-[#1A1A18] pt-4 md:pt-0">
+                <div className="flex min-h-[50px] items-center border-gray-100 pt-4 font-[Inter] text-[16px] leading-tight font-semibold text-[#1A1A18] md:h-[76px] md:border-t md:pt-0 md:text-[18px] md:leading-[27.9px]">
                   {row.label}
                 </div>
 
                 {/* SLUNG - Highlights on mobile */}
-                <div className="h-auto py-4 md:py-0 md:h-[76px] md:border md:border-white bg-[#DFE5F2] flex items-center px-4 md:px-6 rounded-md md:rounded-none my-2 md:my-0">
+                <div className="my-2 flex h-auto items-center rounded-md bg-[#BBCEF7] px-4 py-4 md:my-0 md:h-[76px] md:rounded-none md:border md:border-white md:px-6 md:py-0">
                   <div className="flex items-start gap-2">
-                    <Check size={18} className="text-[#18B007] mt-1 shrink-0" />
+                    <Check size={18} className="mt-1 shrink-0 text-[#18B007]" />
                     <div className="flex flex-col text-[#0f172a]">
-                      <span className="md:hidden text-[12px] uppercase font-[Syne] font-semibold   text-[#4164B0]">
+                      <span className="font-[Syne] text-[12px] font-semibold text-[#4164B0] uppercase md:hidden">
                         Slung
                       </span>
                       <div
-                        className={`font-[Syne] font-semibold text-[16px] md:text-[18px] leading-tight md:leading-[27.9px] ${row.color?.color1}`}
+                        className={`font-[Syne] text-[16px] leading-tight font-semibold md:text-[18px] md:leading-[27.9px] ${row.color?.color1}`}
                       >
                         {row.slung}
                       </div>
-                      <div className="font-[Syne] leading-tight text-sm md:text-base opacity-80">
+                      <div className="font-[Syne] text-sm leading-tight opacity-80 md:text-base">
                         {row.slungSub}
                       </div>
                     </div>
@@ -84,19 +84,19 @@ export default function CompareSection() {
                 </div>
 
                 {/* OTHERS / LEGACY */}
-                <div className="h-auto py-4 md:py-0 md:h-[76px] flex items-center bg-white md:border-t border-gray-100 px-4 md:px-6 mb-4 md:mb-0">
+                <div className="mb-4 flex h-auto items-center border-gray-100 bg-white px-4 py-4 md:mb-0 md:h-[76px] md:border-t md:px-6 md:py-0">
                   <div className="flex items-start gap-2">
-                    <X size={18} className="text-[#E00000] mt-1 shrink-0" />
+                    <X size={18} className="mt-1 shrink-0 text-[#E00000]" />
                     <div className="flex flex-col">
-                      <span className="md:hidden text-[12px] uppercase font-bold text-gray-400">
+                      <span className="text-[12px] font-bold text-gray-400 uppercase md:hidden">
                         Others
                       </span>
                       <div
-                        className={`font-semibold font-[Syne] text-[#0f172a] text-[16px] md:text-[18px] leading-tight md:leading-[27.9px] ${row.color?.color2}`}
+                        className={`font-[Syne] text-[16px] leading-tight font-semibold text-[#0f172a] md:text-[18px] md:leading-[27.9px] ${row.color?.color2}`}
                       >
                         {row.legacy}
                       </div>
-                      <div className="text-gray-600 font-[Syne] leading-tight text-sm md:text-base">
+                      <div className="font-[Syne] text-sm leading-tight text-gray-600 md:text-base">
                         {row.legacySub}
                       </div>
                     </div>
@@ -110,7 +110,7 @@ export default function CompareSection() {
 
       {/* BUTTON */}
       <div className="mt-8">
-        <button className="px-8 py-3 border-2 rounded-lg font-[Inter] font-medium text-[16px] leading-[25.6px] text-[#0f172a] hover:bg-gray-50 transition-all w-full md:w-auto">
+        <button className="w-full rounded-lg border-2 px-8 py-3 font-[Inter] text-[16px] leading-[25.6px] font-medium text-[#0f172a] transition-all hover:bg-gray-50 md:w-auto">
           See Our Plans
         </button>
       </div>
