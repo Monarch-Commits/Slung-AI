@@ -15,20 +15,49 @@ export const HowItWorksSteps = [
       'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
     img: '/cards/1.png',
     gradient: 'from-[#dff2ff] via-[#bfe6ff] to-[#4fb3ff]',
+    scale: 1.6,
   },
   {
     title: 'Model',
     description:
       'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection — all included.',
-    img: '/cards/2.png',
-    gradient: 'bg-gradient-to-br from-[#dbeafe] via-[#93c5fd] to-[#6366f1]',
+    img: '/cards/222.png',
+    gradient: 'from-[#dbeafe] via-[#93c5fd] to-[#6366f1]',
+    scale: 1.8,
   },
   {
     title: 'Decide',
     description:
       'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
-    img: '/cards/3.png',
-    gradient: 'bg-gradient-to-r from-[#4fb3ff] via-[#93c5fd] to-[#dbeafe]',
+    img: '/cards/333.png',
+    gradient: 'from-[#4fb3ff] via-[#93c5fd] to-[#dbeafe]',
+    scale: 1.7,
+  },
+];
+
+// Constant.ts o Constant/index.ts
+
+export const HowItWorksSteps1 = [
+  {
+    title: 'Upload',
+    description:
+      'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
+    img: '/cards/1.png',
+    gradient: 'from-blue-50 to-blue-100', // Tailwind gradient classes
+  },
+  {
+    title: 'Model',
+    description:
+      'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection.',
+    img: '/cards/222.png',
+    gradient: 'from-indigo-50 to-indigo-100',
+  },
+  {
+    title: 'Decide',
+    description:
+      'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
+    img: '/cards/333.png',
+    gradient: 'from-slate-50 to-slate-100',
   },
 ];
 
