@@ -14,12 +14,12 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-inter text-[64px] font-semibold leading-[68px] tracking-[-2.05px] text-slate-900 text-center max-w-[867px]">
+          <h1 className="font-inter text-[48px] sm:text-[64px] font-semibold leading-[68px] tracking-[-2.05px] text-slate-900 text-center max-w-[867px]">
             Your Multifamily <br />
             Analyst, <span className="italic text-[#4164b0]">Unleashed.</span>
           </h1>
 
-          <p className="font-[Syne] font-normal text-[24px] leading-[30px] text-center text-[#6B6B68] max-w-2xl mx-auto">
+          <p className="font-[Syne] font-normal text-[16px] sm:text-[24px] leading-[30px] text-center text-[#6B6B68] max-w-2xl mx-auto">
             Slung is the AI underwriting platform for investors and brokers.
           </p>
 
