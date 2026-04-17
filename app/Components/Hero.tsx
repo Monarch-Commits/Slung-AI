@@ -23,7 +23,7 @@ export default function Hero() {
             Slung is the AI underwriting platform for investors and brokers.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-[16px] sm:gap-[32px] w-full max-w-[330px] sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-[16px] sm:gap-[32px] w-full sm:w-auto">
             {/* Primary Button */}
             <button className="bg-[#4164B0] px-[24px] py-[10px] rounded-[8px]">
               <span className="font-[Inter] font-medium text-[16px] leading-[25.6px] text-white text-center">
