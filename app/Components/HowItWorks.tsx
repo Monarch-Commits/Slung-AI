@@ -38,7 +38,7 @@ export default function HowItWorks() {
               className="flex h-[500px] w-full flex-col gap-[16px] overflow-hidden rounded-b-[16px] md:h-[559px]"
             >
               {/* TEXT */}
-              <div className="flex h-[30%] flex-col gap-4 p-6 md:p-8">
+              <div className="flex h-[30%] flex-col gap-4 p-6 md:p-2">
                 <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1e293b]">
                   {step.title}
                 </h3>

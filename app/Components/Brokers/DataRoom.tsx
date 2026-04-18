@@ -6,7 +6,7 @@ export default function DataRoom() {
 
   return (
     <div className="relative flex h-full w-full items-start justify-center rounded-t-md bg-gradient-to-r from-[#72B4FD] to-[#72B4FD] px-10 font-sans text-[11px]">
-      <div className="absolute bottom-0 flex h-[250px] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-4 border-t-4 border-gray-200 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
+      <div className="absolute bottom-0 flex h-[90%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-4 border-t-4 border-gray-200 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
         {/* HEADER */}
         <div className="flex items-center justify-between px-3 py-2">
           <h2 className="text-xs font-medium text-[#406298]">Share Report</h2>
@@ -26,7 +26,7 @@ export default function DataRoom() {
         {/* BODY */}
         <div className="flex flex-1 flex-col overflow-y-auto bg-[#fbfcfd] p-2">
           {/* TOP ROW */}
-          <div className="mb-2 flex items-center justify-between pt-1 sm:pt-4">
+          <div className="mb-2 flex items-center justify-between gap-5 pt-1 sm:pt-4">
             <div className="flex items-center gap-3">
               <h3 className="text-sm font-normal text-[#406298]">DataRoom</h3>
               <Info className="h-3 w-3 text-gray-400" />
@@ -43,7 +43,7 @@ export default function DataRoom() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-gray-400">
+            <div className="hidden items-center gap-2 text-gray-400 sm:flex">
               <Copy className="h-4 w-4 cursor-pointer hover:text-[#406298]" />
               <Mail className="h-4 w-4 cursor-pointer hover:text-[#406298]" />
             </div>
@@ -60,7 +60,7 @@ export default function DataRoom() {
           </div>
 
           {/* DOCUMENTS ACCORDION SECTION */}
-          <div className="flex flex-col">
+          <div className="flex flex-col overflow-x-auto">
             <div className="mb-2 flex items-center justify-between">
               <div className="flex cursor-pointer items-center gap-1 text-[#406298]">
                 <ChevronDown className="h-4 w-4" />

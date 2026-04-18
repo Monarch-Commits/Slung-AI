@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-
 import { brokersFeatures, investorsFeatures } from '@/app/Constant';
 import BOVs from './Brokers/BOVs';
 import DataRoom from './Brokers/DataRoom';
