@@ -4,7 +4,7 @@ import { Compare } from '../Constant';
 
 export default function CompareSection() {
   return (
-    <section className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-6 border px-4 py-[60px] sm:px-6 md:px-10 md:py-[100px]">
+    <section className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-6 border px-6 py-[60px] sm:px-10 md:px-[42px] md:py-[100px]">
       {/* HEADER */}
       <div className="w-full">
         <div className="mb-8 flex w-full items-center justify-between">

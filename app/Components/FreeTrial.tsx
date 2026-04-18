@@ -4,7 +4,7 @@ export default function Trial() {
   return (
     <div
       id="pricing"
-      className="w-full relative  mx-auto py-[100px] border  flex flex-col items-center justify-center  px-6 md:px-10 font-sans "
+      className="relative mx-auto flex w-full flex-col items-center justify-center border px-6 py-[100px] font-sans sm:px-10 md:px-[42px]"
     >
       <div
         className="absolute inset-0 opacity-[0.15]"
@@ -13,32 +13,32 @@ export default function Trial() {
           backgroundSize: '16px 16px',
         }}
       />
-      <div className="flex w-full items-center justify-between mb-8">
+      <div className="mb-8 flex w-full items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="border border-gray-300 px-3 py-1 text-[16px] leading-[30px] text-center text-gray-500 rounded font-[Syne] font-normal tracking-normal">
+          <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-gray-500">
             05
           </div>
         </div>
-        <span className="font-[Syne] font-normal text-[16px] leading-[30px] tracking-normal text-center text-[#6B6B68]">
+        <span className="text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
           Get Started
         </span>
       </div>
 
-      <div className="flex w-full lg:flex-row flex-col pt-2 md:pt-4  sm:gap-10 gap-4 items-start justify-between">
+      <div className="flex w-full flex-col items-start justify-between gap-4 pt-2 sm:gap-10 md:pt-4 lg:flex-row">
         <div className="w-full max-w-[501px]">
-          <h1 className="font-[Inter] font-semibold text-[48px] leading-none tracking-[-2.05px] text-[#1A1A18] text-left mb-6 max-w-xl">
+          <h1 className="mb-6 max-w-xl text-left font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
             Start with a 14-Day <br />
-            <span className="text-[#4164B0] font-semibold italic tracking-[-2.05px] leading-none">
+            <span className="leading-none font-semibold tracking-[-2.05px] text-[#4164B0] italic">
               Free Trial of Principal
             </span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-start">
-            <button className="bg-[#3F63B5] hover:bg-[#34539A] text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-[Inter] font-medium text-[16px] leading-[25.6px] tracking-normal text-center transition-all shadow-lg shadow-blue-200 w-full sm:w-auto">
+          <div className="flex flex-col items-start gap-4 sm:flex-row">
+            <button className="w-full rounded-lg bg-[#3F63B5] px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-white shadow-lg shadow-blue-200 transition-all hover:bg-[#34539A] sm:w-auto md:px-8 md:py-4">
               Start for free
             </button>
 
-            <button className="bg-white border border-slate-200 text-slate-900 px-6 md:px-8 py-3 md:py-4 rounded-lg font-[Inter] font-medium text-[16px] leading-[25.6px] tracking-normal text-center transition-all hover:bg-slate-50 w-full sm:w-auto">
+            <button className="w-full rounded-lg border border-slate-200 bg-white px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-slate-900 transition-all hover:bg-slate-50 sm:w-auto md:px-8 md:py-4">
               See our plans
             </button>
           </div>

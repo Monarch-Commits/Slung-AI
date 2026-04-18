@@ -3,8 +3,8 @@ import { steps } from '../Constant';
 
 export default function HowItWorks() {
   return (
-    <section className="w-full border bg-white">
-      <div className="mx-auto flex max-w-[1170px] flex-col gap-[24px] px-[41px] py-[100px]">
+    <section id="how-it-works" className="w-full border bg-white">
+      <div className="mx-auto flex max-w-[1170px] flex-col gap-[24px] px-6 py-[100px] sm:px-10 md:px-[42px]">
         <div className="flex w-full items-center justify-between">
           <div className="rounded border border-gray-300 px-3 py-1 text-center text-[16px] font-normal text-gray-500">
             02
