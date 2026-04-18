@@ -9,7 +9,7 @@ export default function TrackDataRoom() {
 
   return (
     <div className="relative flex h-full w-full items-start justify-center rounded-t-md bg-[linear-gradient(114.36deg,_#CFDEF4_7.91%,_#97B9EC_18.9%,_#77AFEC_33.3%,_#76B2F6_46.18%,_#72B4FD_58.31%,_#46A2F4_69.29%,_#2A8CE8_86.72%)] px-10 font-sans text-[11px]">
-      <div className="absolute bottom-0 flex h-[90%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-4 border-t-4 border-gray-200 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
+      <div className="absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-4 border-t-4 border-gray-200 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
         {/* HEADER (fixed) */}
         <div className="flex items-center justify-between px-3 py-2">
           <h2 className="text-xs font-medium text-[#406298]">Share Report</h2>
@@ -29,29 +29,26 @@ export default function TrackDataRoom() {
         {/* BODY */}
         <div className="flex flex-1 flex-col bg-[#fbfcfd] p-2">
           {/* TOP ROW */}
-          <div className="mb-2 flex items-center justify-between gap-5 pt-1 sm:pt-5">
+          <div className="mb-2 flex items-center justify-between gap-5 pt-1 sm:pt-4">
             <div className="flex items-center gap-3">
               <h3 className="text-sm font-normal text-[#406298]">DataRoom</h3>
               <Info className="h-3 w-3 text-gray-400" />
 
-              <div className="flex items-center gap-2 font-sans">
-                {/* Status Text */}
+              <div className="flex items-center gap-2">
                 <div className="flex items-center gap-1">
-                  <span className="text-xs text-gray-400">Status:</span>
-                  <span className="text-sm font-medium text-[#4e71ae]">Active</span>
+                  <span className="text-[10px] text-gray-400">Status:</span>
+                  <span className="text-[10px] font-medium text-[#4e71ae]">Active</span>
                 </div>
-
                 {/* Static Toggle Switch */}
-                <div className="relative h-[22px] w-[42px] rounded-full bg-[#4e71ae] shadow-inner">
-                  {/* White Knob - Positioned to the right for "Active" */}
-                  <div className="absolute top-[3px] right-[3px] h-4 w-4 rounded-full bg-white shadow-sm"></div>
+                <div className="relative h-[18px] w-[36px] rounded-full bg-[#4e71ae] shadow-inner">
+                  <div className="absolute top-[2px] right-[2px] h-[14px] w-[14px] rounded-full bg-white shadow-sm"></div>
                 </div>
               </div>
             </div>
 
-            <div className="hidden items-center gap-2 text-gray-500 sm:flex">
-              <Copy className="h-3 w-3 cursor-pointer hover:text-[#406298]" />
-              <Mail className="h-3 w-3 cursor-pointer hover:text-[#406298]" />
+            <div className="hidden items-center gap-2 text-gray-400 sm:flex">
+              <Copy className="h-4 w-4 cursor-pointer hover:text-[#406298]" />
+              <Mail className="h-4 w-4 cursor-pointer hover:text-[#406298]" />
             </div>
           </div>
 
@@ -66,7 +63,7 @@ export default function TrackDataRoom() {
           </div>
 
           {/* TABLE (scrollable area) */}
-          <div className="flex-1 overflow-x-auto rounded border border-gray-200 bg-white">
+          <div className="flex w-full overflow-x-auto rounded border border-gray-200 bg-white">
             <table className="w-full border-collapse text-left text-[10px]">
               <thead>
                 <tr className="border-b bg-[#f9fafb]">
