@@ -1,0 +1,50 @@
+import React from 'react';
+import { User } from 'lucide-react';
+
+export default function BiddersLead() {
+  const offers = [
+    { range: '$58.0M-$59.6M', count: 2 },
+    { range: '$56.0M-$57.9M', count: 5 },
+    { range: '$54.0M-$55.9M', count: 3 },
+  ];
+
+  return (
+    <div className="flex h-full w-full items-center justify-center rounded-t-md bg-[linear-gradient(to_right,_#72B4FD,_#72B4FD,_#72B4FD,_#76B2F6,_#77AFEC,_#97B9EC,_#CFDEF4)] p-6 font-sans">
+      <div className="relative flex flex-col items-start">
+        {/* MAIN CARD */}
+        <div className="relative z-10 flex min-w-[90%] items-center gap-4 rounded-xl border border-white/50 bg-white px-6 py-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:min-w-[380px]">
+          <span className="text-lg font-medium text-[#1a1a1a]">Clearwater Largo Rd, Largo, FL</span>
+
+          <span className="rounded-md bg-[#44ff44] px-2 py-1 text-[11px] font-bold tracking-tight text-[#006400] uppercase">
+            10 Offers
+          </span>
+        </div>
+
+        {/* TREE WRAPPER */}
+        <div className="relative mt-2 ml-12">
+          {/* FIXED LINE (NO OVERFLOW) */}
+          <div className="absolute -top-10 bottom-4 left-0 w-[2px] bg-white/40" />
+
+          <div className="flex flex-col gap-3 py-4">
+            {offers.map((offer, index) => (
+              <div key={index} className="relative flex items-center pl-10">
+                {/* HORIZONTAL LINE */}
+                <div className="absolute top-1/2 left-0 h-[2px] w-10 -translate-y-1/2 bg-white/40" />
+
+                {/* CARD */}
+                <div className="flex w-[240px] cursor-pointer items-center justify-between rounded-xl border border-white/50 bg-white px-6 py-4 shadow-lg transition-transform hover:scale-[1.02]">
+                  <span className="text-sm font-medium text-gray-700">{offer.range}</span>
+
+                  <div className="flex items-center gap-2 text-gray-500">
+                    <User className="h-4 w-4" />
+                    <span className="text-sm font-semibold">{offer.count}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -10,35 +10,35 @@ const avatars = [
 
 export default function Collaborate() {
   return (
-    <div className="relative w-full h-full  bg-linear-to-br  from-blue-400 rounded-t-xl to-blue-100 overflow-hidden flex items-center justify-center">
+    <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-t-xl bg-gradient-to-r from-[#E3EEF9] via-[#5BB0FC] via-[#A3CCF4] to-[#2F90EA]">
       <div className="absolute inset-0 flex items-center justify-center opacity-20">
-        <div className="absolute border border-white rounded-full w-[100px] h-[100px]" />
-        <div className="absolute border border-white rounded-full w-[200px] h-[200px]" />
-        <div className="absolute border border-white rounded-full w-[300px] h-[300px]" />
-        <div className="absolute border border-white rounded-full w-[400px] h-[400px]" />
+        <div className="absolute h-[100px] w-[100px] rounded-full border border-white" />
+        <div className="absolute h-[200px] w-[200px] rounded-full border border-white" />
+        <div className="absolute h-[300px] w-[300px] rounded-full border border-white" />
+        <div className="absolute h-[400px] w-[400px] rounded-full border border-white" />
       </div>
 
-      <div className="z-10 absolute -bottom-30 sm:-bottom-2 left-2 sm:left-6 bg-white  ring-6 ring-gray-300/50  w-full max-w-[250px] sm:max-w-[371px] rounded-t-3xl shadow-2xl ">
-        <div className="flex justify-end w-full relative items-center px-4 border-b-4 py-4 gap-[18px] mb-10">
+      <div className="absolute -bottom-30 left-2 z-10 w-full max-w-[250px] rounded-t-3xl bg-white shadow-2xl ring-6 ring-gray-300/50 sm:-bottom-2 sm:left-6 sm:max-w-[371px]">
+        <div className="relative mb-10 flex w-full items-center justify-end gap-[18px] border-b-4 px-4 py-4">
           <div className="flex -space-x-4">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200" />
+              <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-gray-200" />
             ))}
-            <div className="w-8 h-8 rounded-full border-2 border-white bg-purple-100 flex items-center justify-center text-[10px] font-bold">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-purple-100 text-[10px] font-bold">
               +8
             </div>
           </div>
-          <button className="px-6 py-1.5  border border-gray-200 rounded-md text-sm font-medium hover:bg-gray-50 transition">
+          <button className="rounded-md border border-gray-200 px-6 py-1.5 text-sm font-medium transition hover:bg-gray-50">
             Share
           </button>
         </div>
-        <div className="h-32 bg-white-50 rounded-xl" />
+        <div className="bg-white-50 h-32 rounded-xl" />
       </div>
 
       {avatars.map((avatar, index) => (
         <motion.div
           key={avatar.id}
-          className={`absolute ${avatar.pos} w-12 h-12 rounded-full border-4 border-white shadow-lg flex items-center justify-center overflow-hidden font-bold text-white ${avatar.color || ''}`}
+          className={`absolute ${avatar.pos} flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border-4 border-white font-bold text-white shadow-lg ${avatar.color || ''}`}
           animate={{
             y: [0, -20, 0],
           }}
@@ -54,7 +54,7 @@ export default function Collaborate() {
               width={64}
               height={64}
               alt="user"
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           ) : (
             avatar.label

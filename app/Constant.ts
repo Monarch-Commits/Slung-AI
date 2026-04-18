@@ -142,3 +142,53 @@ export const Compare = [
     },
   },
 ];
+
+// Feature data for the Investors component
+export const investorsFeatures = [
+  {
+    id: '01',
+    label: 'Upload & Underwrite',
+    description:
+      'Upload raw documents and get a full, institutional-grade underwriting model in minutes.',
+  },
+  {
+    id: '02',
+    label: 'Live Rent Comps.',
+    description: 'Real-time rent comps pulled directly into your model. No external tools.',
+  },
+  {
+    id: '03',
+    label: 'Excel Export.',
+    description: 'Work in the Slung web app or export it to a dynamic Excel model.',
+  },
+  {
+    id: '04',
+    label: 'Collaborate & Share.',
+    description:
+      'Share the live Slung model with your team or a static copy to investors and lenders.',
+  },
+];
+
+// Feature data for the Brokers component
+export const brokersFeatures = [
+  {
+    id: '01',
+    label: 'BOVs in Minutes.',
+    description: 'Generate a full Brokers Opinion of Value to sellers. Win more listings.',
+  },
+  {
+    id: '02',
+    label: 'Data Room with Underwriting',
+    description: 'In addition to raw documents, buyers get a prepopulated model to underwrite.',
+  },
+  {
+    id: '03',
+    label: 'Track Dataroom',
+    description: 'Know exactly which buyers have opened the Document Vault',
+  },
+  {
+    id: '04',
+    label: 'Bidders Lead to Market Pricing',
+    description: 'Remove the underwriting hurdle and receive more offers, driving price discovery.',
+  },
+];
