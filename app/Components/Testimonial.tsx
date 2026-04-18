@@ -4,7 +4,7 @@ export default function Testimonial() {
       <div className="flex min-h-[420px] w-full flex-col gap-6 border border-slate-200 px-6 py-16 sm:px-10 md:min-h-[490px] md:px-[42px] md:py-[100px]">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-6">
-            <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-gray-500">
+            <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
               01
             </div>
           </div>

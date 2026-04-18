@@ -43,7 +43,7 @@ export default function Platform() {
       id="platform"
       className="mx-auto flex w-full justify-center border-x border-b bg-white"
     >
-      <div className="mx-auto w-full px-4 pt-12 sm:px-6 md:px-8 md:pt-[47px]">
+      <div className="mx-auto w-full px-4 pt-12 sm:px-6 md:px-[58.5px] md:pt-[47px]">
         {/* TOGGLE */}
         <div className="mb-8 flex overflow-hidden rounded border border-gray-200 md:mb-10">
           <button
@@ -72,12 +72,12 @@ export default function Platform() {
         <div className="flex w-full flex-col gap-[24px] lg:flex-row">
           {/* LEFT */}
           <div className="flex w-full flex-col justify-start gap-6 sm:gap-[32px] lg:w-[400px]">
-            <div className="flex flex-col gap-8 sm:gap-8">
+            <div className="flex flex-col gap-7 sm:gap-[32px]">
               {featuresData.map((item) => {
                 const isActive = activeTab === item.id;
 
                 return (
-                  <div key={item.id} onClick={() => setActiveTab(item.id)}>
+                  <div className="gap-[8px]" key={item.id} onClick={() => setActiveTab(item.id)}>
                     <div className="mb-3 flex items-center justify-between">
                       <span
                         className={`font-[Inter] text-[18px] leading-[27.9px] ${

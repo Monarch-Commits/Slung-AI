@@ -6,10 +6,14 @@ export default function HowItWorks() {
     <section id="how-it-works" className="w-full border bg-white">
       <div className="mx-auto flex max-w-[1170px] flex-col gap-[24px] px-6 py-[100px] sm:px-10 md:px-[42px]">
         <div className="flex w-full items-center justify-between">
-          <div className="rounded border border-gray-300 px-3 py-1 text-center text-[16px] font-normal text-gray-500">
-            02
+          <div className="flex items-center gap-6">
+            <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
+              02
+            </div>
           </div>
-          <span className="text-[16px] font-normal text-[#6B6B68]">How It Works</span>
+          <span className="text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
+            How it Works
+          </span>
         </div>
 
         <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">

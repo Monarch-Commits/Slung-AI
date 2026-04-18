@@ -15,7 +15,7 @@ export default function Trial() {
       />
       <div className="mb-8 flex w-full items-center justify-between">
         <div className="flex items-center gap-6">
-          <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-gray-500">
+          <div className="rounded border border-gray-300 px-3 py-1 text-center font-[Syne] text-[16px] leading-[30px] font-normal tracking-normal text-[#6B6B68]">
             05
           </div>
         </div>
