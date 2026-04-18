@@ -8,30 +8,31 @@ export const NAV_LINKS = [
 ];
 
 // Data for the How It Works section
-export const HowItWorksSteps = [
+export const steps = [
   {
     title: 'Upload',
     description:
       'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
-    img: '/cards/1.png',
-    gradient: 'from-[#dff2ff] via-[#bfe6ff] to-[#4fb3ff]',
-    s: 'absolute -bottom-10 ',
+    img: '/cards/Step1.png',
+    position: 'bottom-0 left-1/2 -translate-x-1/2 rounded-t-lg  h-[90%] w-[220px] ',
+    linear: 'bg-gradient-to-t from-[#2385D8] to-[#E6F4FE]',
   },
   {
     title: 'Model',
     description:
       'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection — all included.',
-    img: '/cards/2222.png',
-    gradient: 'from-[#dbeafe] via-[#93c5fd] to-[#6366f1]',
-    s: 'absolute bottom-0 -right-25',
+    img: '/cards/Step2.png',
+    position: 'bottom-0 left-6 h-[90%] w-[100%] rounded-t-lg ',
+    linear: ' bg-gradient-to-t from-[#F3F9FF] to-[#BBD6FF]',
   },
   {
     title: 'Decide',
     description:
       'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
-    img: '/cards/3333.png',
-    gradient: 'from-[#4fb3ff] via-[#93c5fd] to-[#dbeafe]',
-    s: 'absolute -bottom-4 left-[-30px]',
+    img: '/cards/Step3.png',
+    position: 'bottom-0 -left-20 h-[90%] w-[120%] rounded-t-lg ',
+    linear:
+      'bg-gradient-to-t from-[#F5FAFE] via-[#2385D8] via-[#BBD6FF] via-[#2385D8] to-[#BBD6FF]',
   },
 ];
 

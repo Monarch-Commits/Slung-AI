@@ -1,133 +1,88 @@
-'use client';
+import React from 'react';
+import Image from 'next/image';
+import { Inter } from 'next/font/google';
 
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+const inter = Inter({ subsets: ['latin'] });
 
-import UploadAndRewrite from '../Investors/UploadAndRewrite';
-import LiveRent from '../Investors/LiveRent';
-import ExcelExport from '../Investors/ExcelExport';
-import Collaborate from '../Investors/Collaborate';
-import { brokersFeatures, investorsFeatures } from '@/app/Constant';
-import BOVs from '../Brokers/BOVs';
-import DataRoom from '../Brokers/DataRoom';
-import TrackDataroom from '../Brokers/TrackDataroom';
-import OfferTree from '../Brokers/BiddersLead';
-
-export default function Platform() {
-  const [activeUser, setActiveUser] = useState<'investors' | 'brokers'>('investors');
-  const [activeTab, setActiveTab] = useState('01');
-
-  const investorComponents: Record<string, React.ReactNode> = {
-    '01': <UploadAndRewrite />,
-    '02': <LiveRent />,
-    '03': <ExcelExport />,
-    '04': <Collaborate />,
-  };
-
-  const brokerComponents: Record<string, React.ReactNode> = {
-    '01': <BOVs />,
-    '02': <DataRoom />,
-    '03': <TrackDataroom />,
-    '04': <OfferTree />,
-  };
-
-  const featuresData = activeUser === 'investors' ? investorsFeatures : brokersFeatures;
-  const components = activeUser === 'investors' ? investorComponents : brokerComponents;
-
-  const handleUserChange = (type: 'investors' | 'brokers') => {
-    setActiveUser(type);
-    setActiveTab('01');
-  };
+export default function HowItWorks() {
+  const steps = [
+    {
+      title: 'Upload',
+      description:
+        'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
+      img: '/cards/1111.png',
+      position: 'bottom-0 left-1/2 -translate-x-1/2 rounded-t-lg  h-[90%] w-[220px] ',
+      linear: 'bg-gradient-to-t from-[#2385D8] to-[#E6F4FE]',
+    },
+    {
+      title: 'Model',
+      description:
+        'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection — all included.',
+      img: '/cards/21.png',
+      position: 'bottom-0 left-6 h-[90%] w-[100%] rounded-t-lg ',
+      linear: ' bg-gradient-to-t from-[#F3F9FF] to-[#BBD6FF]',
+    },
+    {
+      title: 'Decide',
+      description:
+        'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
+      img: '/cards/33333.png',
+      position: 'bottom-0 -left-20 h-[90%] w-[120%] rounded-t-lg ',
+      linear: 'bg-gradient-to-t from-[#F5FAFE] via-[#2385D8] to-[#BBD6FF]',
+    },
+  ];
 
   return (
-    <section
-      id="platform"
-      className="mx-auto flex w-full justify-center border-x border-b bg-white"
-    >
-      <div className="mx-auto w-full px-4 pt-12 sm:px-6 md:px-8 md:pt-[47px]">
-        {/* TOGGLE */}
-        <div className="mb-8 flex overflow-hidden rounded border border-gray-200 md:mb-10">
-          <button
-            onClick={() => handleUserChange('investors')}
-            className={`flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal transition ${
-              activeUser === 'investors'
-                ? 'bg-[#4164B00F] text-[#4164B0]'
-                : 'bg-white text-[#6B6B68]'
-            }`}
-          >
-            For Investors
-          </button>
-
-          <div className="w-px bg-gray-200" />
-
-          <button
-            onClick={() => handleUserChange('brokers')}
-            className={`flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal transition ${
-              activeUser === 'brokers' ? 'bg-[#4164B00F] text-[#4164B0]' : 'bg-white text-[#6B6B68]'
-            }`}
-          >
-            For Brokers
-          </button>
+    <section className={`${inter.className} w-full border bg-white`}>
+      {/* Main Wrapper - GINAWANG FLEX-COL PARA GUMANA ANG GAP */}
+      <div className="mx-auto flex max-w-[1170px] flex-col gap-[24px] px-[41px] py-[100px]">
+        {/* Row 1: Top Header Label */}
+        <div className="flex w-full items-center justify-between">
+          <div className="rounded border border-gray-300 px-3 py-1 text-center text-[16px] font-normal text-gray-500">
+            02
+          </div>
+          <span className="text-[16px] font-normal text-[#6B6B68]">How It Works</span>
         </div>
 
-        <div className="flex w-full flex-col gap-[24px] lg:flex-row">
-          {/* LEFT */}
-          <div className="flex w-full flex-col justify-start gap-6 sm:gap-[32px] lg:w-[400px]">
-            <div className="flex flex-col gap-8 sm:gap-8">
-              {featuresData.map((item) => {
-                const isActive = activeTab === item.id;
+        {/* Row 2: Title */}
+        <h2 className="text-start text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">
+          Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
+        </h2>
 
-                return (
-                  <div key={item.id} onClick={() => setActiveTab(item.id)}>
-                    <div className="mb-3 flex items-center justify-between">
-                      <span
-                        className={`font-[Inter] text-[18px] leading-[27.9px] ${
-                          isActive ? 'font-semibold text-[#4164B0]' : 'text-slate-400'
-                        }`}
-                      >
-                        {item.label}
-                      </span>
-
-                      <span
-                        className={`font-[Syne] text-xs sm:text-[16px] ${
-                          isActive ? 'text-[#6B6B68]' : 'text-gray-300'
-                        }`}
-                      >
-                        {item.id}
-                      </span>
-                    </div>
-
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.p
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="font-[Syne] text-[16px] leading-[27.9px] font-normal text-[#64748b]"
-                        >
-                          {item.description}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* RIGHT */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${activeUser}-${activeTab}`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
-              className="relative aspect-[787/600] w-full max-w-[700px] rounded-lg sm:w-[90%] md:w-[80%]"
+        {/* Row 3: Steps Grid */}
+        <div className="grid grid-cols-1 gap-[21.6px] sm:grid-cols-2 md:grid-cols-3">
+          {steps.map((step) => (
+            <article
+              key={step.title}
+              /* Ginawa nating fixed ang h-[559px] (o 503px base sa gusto mo) para pantay ang card containers */
+              className="flex h-[559px] w-full flex-col gap-[14.4px] pt-[21.6px]"
             >
-              {components[activeTab]}
-            </motion.div>
-          </AnimatePresence>
+              {/* Text Content - Nilagyan ng min-h para laging pantay ang simula ng image */}
+              <div className="flex min-h-[140px] flex-col gap-2 px-[14.4px]">
+                <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1e293b]">
+                  {step.title}
+                </h3>
+                <p className="font-[Syne] text-[15px] leading-[24px] text-[#6B6B68]">
+                  {step.description}
+                </p>
+              </div>
+
+              {/* Image Container - Gagamit ng flex-1 para punan ang natitirang space nang pantay */}
+              <div className={`relative flex-1 overflow-hidden rounded-b-lg ${step.linear} `}>
+                <div
+                  className={`absolute ${step.position} border-white-100/50 overflow-hidden border-x-4 border-t-4 bg-white`}
+                >
+                  <Image
+                    src={step.img}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
+                    priority={true}
+                  />
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
