@@ -10,7 +10,6 @@ export default function UploadAndRewrite() {
           fill
           className="object-cover object-top"
           priority
-          quality={100}
         />
       </div>
     </div>

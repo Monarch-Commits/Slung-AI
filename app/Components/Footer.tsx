@@ -12,7 +12,7 @@ export default function Footer() {
               alt="SlungAI Logo"
               width={109}
               height={43}
-              className="object-contain"
+              className="h-auto w-[109px] object-contain"
             />
           </Link>
         </div>

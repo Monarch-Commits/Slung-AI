@@ -16,7 +16,7 @@ export default function HowItWorks() {
           </span>
         </div>
 
-        <p className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
+        <p className="text-start font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
           Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
         </p>
 
@@ -26,10 +26,10 @@ export default function HowItWorks() {
               key={step.title}
               className="flex h-[559px] w-full flex-col gap-[14.4px] pt-[21.6px]"
             >
-              <div className="flex min-h-[140px] flex-col gap-2 px-[14.4px]">
-                <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1A1A18]">
+              <div className="flex min-h-[116px] flex-col gap-2 px-[14.4px] md:min-h-[140px]">
+                <p className="font-[Inter] text-[24px] leading-[27.9px] font-semibold tracking-normal text-[#1A1A18] md:text-[32px]">
                   {step.title}
-                </h3>
+                </p>
                 <p className="font-[Syne] text-[15px] leading-[24px] text-[#6B6B68]">
                   {step.description}
                 </p>
@@ -54,7 +54,6 @@ export default function HowItWorks() {
                     width={369}
                     height={90}
                     className="absolute top-[42%] -right-1 h-auto w-[123px] object-contain"
-                    priority
                     quality={100}
                   />
                 )}

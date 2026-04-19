@@ -42,8 +42,7 @@ export default function CompareSection() {
                 width={114.59}
                 height={46}
                 quality={75}
-                className="object-contain"
-                priority
+                className="h-auto w-[114.59px] object-contain"
               />
             </div>
 

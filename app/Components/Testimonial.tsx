@@ -15,11 +15,11 @@ export default function Testimonial() {
 
         {/* CONTENT */}
         <div className="mx-auto flex max-w-[1218px] flex-col items-center gap-6 text-center">
-          <p className="text-center font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">
+          <p className="text-center font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
             Real People, <span className="text-[#4164B0] italic">Real Deals</span>
           </p>
 
-          <blockquote className="w-full max-w-[1218px] text-center font-[Inter] text-[32px] leading-[1.2] font-semibold tracking-normal text-[#1e293b]">
+          <blockquote className="w-full max-w-[1218px] text-center font-[Inter] text-[24px] leading-[1.2] font-semibold tracking-normal text-[#1e293b] md:text-[32px]">
             We went from underwriting 3 deals a week to 24. Same team. Less hours. With Slung.
           </blockquote>
 

@@ -13,8 +13,9 @@ export default function Navbar() {
             alt="SlungAI Logo"
             width={114}
             height={46}
-            className="object-contain"
+            className="h-auto w-[114px] object-contain"
             quality={75}
+            priority
           />
         </Link>
 

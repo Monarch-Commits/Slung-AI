@@ -9,7 +9,6 @@ export default function LiveRent() {
           alt="Underwriting Model"
           fill
           className="object-cover object-top"
-          priority
           quality={100}
         />
       </div>

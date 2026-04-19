@@ -25,9 +25,9 @@ export default function FAQ() {
         </div>
 
         {/* Title */}
-        <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">
+        <p className="text-start font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
           Frequently Asked <span className="text-[#4164B0] italic">Questions</span>
-        </h2>
+        </p>
 
         {/* List */}
         <div className="flex flex-col gap-3 md:gap-[24px]">

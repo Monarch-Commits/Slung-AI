@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Slung AI',
+  title: 'SlungAI',
   description: 'AI underwriting platform for real estate investors and brokers.',
   icons: {
     icon: '/slung.png',
