@@ -5,7 +5,7 @@ export default function WorksWithDocument() {
     <section className="mx-auto flex w-full justify-center border bg-white">
       <div className="flex w-full flex-col items-center justify-center gap-6 px-4 py-20 md:px-8 md:py-[100px] lg:px-0">
         {/* Title */}
-        <h2 className="text-center font-[Inter] text-3xl leading-none font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
+        <h2 className="text-center font-[Inter] text-3xl leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
           Works with <span className="text-[#4164B0] italic">Documents from</span>
         </h2>
 

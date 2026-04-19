@@ -25,7 +25,7 @@ export default function FAQ() {
         </div>
 
         {/* Title */}
-        <p className="text-start font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
+        <p className="text-start font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
           Frequently Asked <span className="text-[#4164B0] italic">Questions</span>
         </p>
 

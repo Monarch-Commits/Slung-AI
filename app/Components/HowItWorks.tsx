@@ -16,7 +16,7 @@ export default function HowItWorks() {
           </span>
         </div>
 
-        <p className="text-start font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
+        <p className="text-start font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
           Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
         </p>
 

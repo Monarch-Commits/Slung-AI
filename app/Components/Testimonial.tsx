@@ -15,7 +15,7 @@ export default function Testimonial() {
 
         {/* CONTENT */}
         <div className="mx-auto flex max-w-[1218px] flex-col items-center gap-6 text-center">
-          <p className="text-center font-[Inter] text-[32px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
+          <p className="text-center font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
             Real People, <span className="text-[#4164B0] italic">Real Deals</span>
           </p>
 

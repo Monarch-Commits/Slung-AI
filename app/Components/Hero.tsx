@@ -16,7 +16,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="font-inter max-w-[867px] text-center text-[48px] leading-[68px] font-semibold tracking-[-2.05px] text-slate-900 sm:text-[64px]">
+          <h1 className="font-inter max-w-[867px] text-center text-[36px] leading-[40px] font-semibold tracking-[-2.05px] text-slate-900 md:text-[64px] md:leading-[68px]">
             Your Multifamily <br />
             Analyst, <span className="text-[#4164b0] italic">Unleashed.</span>
           </h1>
