@@ -41,7 +41,7 @@ export default function Hero() {
           </div>
 
           {/* Features */}
-          <div className="flex flex-wrap items-center justify-center gap-4 text-center font-['DM_Sans'] text-[13px] leading-[20.8px] font-normal sm:gap-[24px]">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-center font-['DM_Sans'] text-[13px] leading-[1.1] font-normal sm:gap-[24px] md:leading-[20.8px]">
             {['No credit card', 'Cancel anytime', '14-day free trial'].map((text) => (
               <span key={text} className="flex items-center gap-1 text-[#A8A8A4]">
                 <span className="flex h-[12.6] w-[12.6] items-center justify-center rounded-full bg-[#E3F5ED] text-[6px] font-bold text-green-900 sm:h-5 sm:w-5 sm:text-[10px]">
