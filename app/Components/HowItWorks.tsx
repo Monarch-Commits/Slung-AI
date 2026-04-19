@@ -21,7 +21,7 @@ export default function HowItWorks() {
         </p>
 
         <div className="grid grid-cols-1 gap-[21.6px] sm:grid-cols-2 md:grid-cols-3">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <article
               key={step.title}
               className="flex h-[559px] w-full flex-col gap-[14.4px] pt-[21.6px]"
@@ -47,6 +47,17 @@ export default function HowItWorks() {
                     priority={true}
                   />
                 </div>
+                {index === 0 && (
+                  <Image
+                    src="/cards/PDFWhite.png"
+                    alt="pdf"
+                    width={369}
+                    height={90}
+                    className="absolute top-[42%] -right-1 h-auto w-[123px] object-contain"
+                    priority
+                    quality={100}
+                  />
+                )}
               </div>
             </article>
           ))}
