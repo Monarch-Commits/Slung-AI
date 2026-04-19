@@ -21,7 +21,7 @@ export default function Hero() {
             Analyst, <span className="text-[#4164b0] italic">Unleashed.</span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-center font-[Syne] text-[16px] leading-[30px] font-normal text-[#6B6B68] sm:text-[24px]">
+          <p className="mx-auto max-w-2xl text-center font-[Syne] text-[16px] leading-[16px] font-normal text-[#6B6B68] sm:text-[24px] md:leading-[30px]">
             Slung is the AI underwriting platform for investors and brokers.
           </p>
 
