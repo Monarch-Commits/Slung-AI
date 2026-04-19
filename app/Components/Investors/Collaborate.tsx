@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 const avatars = [
   { id: 1, label: 'MP', pos: 'top-[15%] left-[30%]', color: 'bg-purple-400' },
-  { id: 2, src: '/Avatar/1.jpg', pos: 'top-[10%] right-[30%]' },
-  { id: 3, src: '/Avatar/2.jpg', pos: 'bottom-[25%] right-[20%]' },
-  { id: 4, src: '/Avatar/3.jpg', pos: 'top-[15%] right-[20%]' },
+  { id: 2, src: '/Avatar/1.jpg', pos: 'top-[30%] right-[55%]' },
+  { id: 3, src: '/Avatar/3.jpg', pos: 'top-[20%] right-[20%]' },
+  { id: 4, src: '/Avatar/2.jpg', pos: 'bottom-[40%] right-[20%]' },
   { id: 5, label: 'TJ', pos: 'bottom-[45%] right-[45%]', color: 'bg-blue-300' },
 ];
 
