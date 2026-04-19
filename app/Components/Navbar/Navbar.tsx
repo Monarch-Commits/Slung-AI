@@ -19,7 +19,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-7">
-          <ul className="hidden items-center gap-8 text-sm font-medium text-gray-600 lg:flex">
+          <ul className="hidden items-center gap-8 text-[13px] font-normal text-gray-600 lg:flex">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <Link href={link.href} className="transition-colors hover:text-blue-900">
@@ -29,7 +29,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button className="rounded-md border-2 border-[#4361ee] px-3 py-2 font-semibold text-[#4361ee] transition-all hover:bg-blue-50 sm:px-[12px] sm:py-[4px] md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px]">
+          <button className="rounded-sm border-2 border-[#4361ee] px-3 py-2 text-[14px] font-medium text-[#4361ee] transition-all hover:bg-blue-50 sm:px-[12px] sm:py-[4px] md:px-[18px] md:py-[6px] lg:px-6 lg:py-[10px]">
             See Our Plans
           </button>
 

@@ -111,7 +111,7 @@ export default function CompareSection() {
 
       {/* BUTTON */}
       <div className="mt-8">
-        <button className="w-full rounded-lg border-2 px-8 py-3 font-[Inter] text-[16px] leading-[25.6px] font-medium text-[#0f172a] transition-all hover:bg-gray-50 md:w-auto">
+        <button className="w-full rounded-lg border-2 px-8 py-3 font-[Inter] text-[16px] leading-[25.6px] font-medium text-[#0f172a] md:w-auto">
           See Our Plans
         </button>
       </div>

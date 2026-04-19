@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { FileText, Table, LucideIcon } from 'lucide-react';
+import { FileText, LucideIcon, Grid3x3 } from 'lucide-react';
 import Image from 'next/image';
 
 type InputCardProps = {
@@ -24,8 +24,8 @@ const InputCard = ({ icon: Icon, color, bg, size, setRef }: InputCardProps) => (
     ref={setRef}
     className="z-10 flex h-[71px] w-14 shrink-0 flex-col items-center justify-center gap-1 rounded border border-slate-200 bg-white"
   >
-    <div className={`flex h-10 w-10 items-center justify-center rounded ${bg}`}>
-      <Icon className={`h-6 w-6 ${color}`} />
+    <div className={`flex h-[48px] w-[48px] items-center justify-center rounded ${bg}`}>
+      <Icon className={`h-[22px] w-[22px] ${color}`} />
     </div>
     <span className="font-[Inter] text-[9px] font-normal text-[#000000]">{size}</span>
   </div>
@@ -170,7 +170,7 @@ export default function ResponsiveDiagram() {
           />
           <InputCard
             setRef={(el) => (inputRefs.current[2] = el)}
-            icon={Table}
+            icon={Grid3x3}
             color="text-[#27500A]"
             bg="bg-[#E4F4EC]"
             size="1.5 MB"

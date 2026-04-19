@@ -7,8 +7,8 @@ export default function Hero() {
         <div className="flex w-full max-w-[780.3px] flex-col items-center gap-7 px-4 pt-12 text-center sm:px-6 md:pt-20">
           <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2">
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2D7C5F] opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#2D7C5F]"></span>
             </span>
 
             <span className="font-inter align-middle text-[13px] leading-[20.8px] font-normal text-slate-600">

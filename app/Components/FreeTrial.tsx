@@ -26,12 +26,12 @@ export default function Trial() {
 
       <div className="flex w-full flex-col items-start justify-between gap-4 pt-2 sm:gap-10 md:pt-4 lg:flex-row">
         <div className="w-full max-w-[501px]">
-          <h1 className="mb-6 max-w-xl text-left font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
+          <p className="mb-6 max-w-xl text-left font-[Inter] text-[48px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18]">
             Start with a 14-Day <br />
-            <span className="leading-none font-semibold tracking-[-2.05px] text-[#4164B0] italic">
+            <span className="font-[Inter] leading-[1.1] font-semibold tracking-[-2.05px] text-[#4164B0] italic">
               Free Trial of Principal
             </span>
-          </h1>
+          </p>
 
           <div className="flex flex-col items-start gap-4 sm:flex-row">
             <button className="w-full rounded-lg bg-[#4164B0] px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-[#FFFFFF] transition-all sm:w-auto md:px-8 md:py-4">
