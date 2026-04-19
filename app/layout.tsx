@@ -40,13 +40,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className}  h-full  antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className} h-full antialiased`}
     >
-      <body className="min-h-full  w-full flex flex-col ">
+      <body className="flex min-h-full w-full flex-col">
         <NavbarWrapper />
         {children}
 
-        <main className="bg-[#4466B1]  text-white py-14 md:py-16 font-sans">
+        <main className="bg-[#4164B0] py-14 font-sans text-white md:py-16">
           <Footer />
         </main>
       </body>

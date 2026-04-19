@@ -18,11 +18,14 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="mb-5 font-[Syne] text-lg">Quick Menu</h3>
+          <p className="mb-5 font-[Syne] text-[14px] font-medium">Quick Menu</p>
           <ul className="space-y-3 text-sm text-slate-100/90">
             {['Platform', 'How It Works', 'Pricing', 'Blog', 'Contact Us'].map((item) => (
               <li key={item}>
-                <a href="#" className="font-[Syne] transition-colors hover:text-white">
+                <a
+                  href="#"
+                  className="font-[Syne] text-[14px] leading-[20px] font-normal tracking-[-0.07px] transition-colors hover:text-white"
+                >
                   {item}
                 </a>
               </li>
@@ -31,11 +34,14 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="mb-5 font-[Syne] text-lg">About</h3>
+          <p className="mb-5 font-[Syne] text-[14px] font-medium">About</p>
           <ul className="space-y-3 text-sm text-slate-100/90">
             {['Teams', 'Office', 'Vision'].map((item) => (
               <li key={item}>
-                <a href="#" className="font-[Syne] transition-colors hover:text-white">
+                <a
+                  href="#"
+                  className="font-[Syne] text-[14px] leading-[20px] font-normal tracking-[-0.07px] transition-colors hover:text-white"
+                >
                   {item}
                 </a>
               </li>
@@ -43,10 +49,10 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-4">
-          <h3 className="mb-4 font-[Syne] text-lg">Subscribe</h3>
+        <div className="flex flex-col gap-6 md:col-span-4">
+          <p className="font-[Syne] text-[14px] font-medium">Subscribe</p>
 
-          <p className="mb-5 font-[Syne] text-sm leading-relaxed text-slate-100/80 md:text-base">
+          <p className="font-[Syne] text-[14px] leading-[20px] font-normal tracking-[-0.07px] text-[#B5BDC9]">
             Subscribe to our newsletter for exclusive updates, insider tips, and offers delivered
             straight to your inbox.
           </p>

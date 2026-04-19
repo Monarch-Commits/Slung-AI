@@ -11,8 +11,8 @@ export default function Navbar() {
           <Image
             src="/NavigationLogo.png"
             alt="SlungAI Logo"
-            width={130}
-            height={52}
+            width={114}
+            height={46}
             className="object-contain"
             quality={75}
           />
