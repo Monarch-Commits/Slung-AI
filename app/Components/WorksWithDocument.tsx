@@ -12,7 +12,7 @@ export default function WorksWithDocument() {
         {/* Logos */}
         <div className="flex w-full max-w-[850px] justify-center opacity-80 transition hover:opacity-100">
           <Image
-            src="/WorkWithDocument.png"
+            src="/WorkWithDocument.svg"
             alt="Supported Document Integrations"
             width={850}
             height={60}
