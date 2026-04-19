@@ -24,11 +24,11 @@ export default function Testimonial() {
           </blockquote>
 
           <div className="flex flex-col items-center gap-1">
-            <cite className="text-center font-['DM_Sans'] text-[24px] leading-[22.4px] font-medium tracking-normal text-[#1A1A18] not-italic">
+            <cite className="text-center font-['DM_Sans'] text-[20px] leading-[22.4px] font-medium tracking-normal text-[#1A1A18] not-italic md:text-[24px]">
               Jordan Y.
             </cite>
 
-            <p className="text-center font-[Syne] text-[24px] leading-[19.2px] font-normal tracking-normal text-[#6B6B68]">
+            <p className="text-center font-[Syne] text-[20px] leading-[19.2px] font-normal tracking-normal text-[#6B6B68] md:text-[24px]">
               Associate · Washington D.C.
             </p>
           </div>
