@@ -45,7 +45,6 @@ export default function HowItWorks() {
                     fill
                     className="object-cover"
                     priority={true}
-                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
               </div>
