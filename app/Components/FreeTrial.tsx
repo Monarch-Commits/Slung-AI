@@ -34,12 +34,12 @@ export default function Trial() {
           </h1>
 
           <div className="flex flex-col items-start gap-4 sm:flex-row">
-            <button className="w-full rounded-lg bg-[#3F63B5] px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-white shadow-lg shadow-blue-200 transition-all hover:bg-[#34539A] sm:w-auto md:px-8 md:py-4">
+            <button className="w-full rounded-lg bg-[#4164B0] px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-[#FFFFFF] transition-all sm:w-auto md:px-8 md:py-4">
               Start for free
             </button>
 
-            <button className="w-full rounded-lg border border-slate-200 bg-white px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-slate-900 transition-all hover:bg-slate-50 sm:w-auto md:px-8 md:py-4">
-              See our plans
+            <button className="w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-slate-900 transition-all hover:bg-slate-50 sm:w-auto md:px-8 md:py-4">
+              See Our Plans
             </button>
           </div>
         </div>

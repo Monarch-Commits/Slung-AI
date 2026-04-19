@@ -16,7 +16,7 @@ export default function HowItWorks() {
           </span>
         </div>
 
-        <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1e293b]">
+        <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
           Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
         </h2>
 
@@ -27,7 +27,7 @@ export default function HowItWorks() {
               className="flex h-[559px] w-full flex-col gap-[14.4px] pt-[21.6px]"
             >
               <div className="flex min-h-[140px] flex-col gap-2 px-[14.4px]">
-                <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1e293b]">
+                <h3 className="font-[Inter] text-[32px] leading-[27.9px] font-semibold tracking-normal text-[#1A1A18]">
                   {step.title}
                 </h3>
                 <p className="font-[Syne] text-[15px] leading-[24px] text-[#6B6B68]">

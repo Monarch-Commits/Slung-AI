@@ -1,27 +1,28 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-6 md:px-10 lg:px-[69px]">
-      <div className="max-w-[1140px] w-full mx-auto grid grid-cols-1 md:grid-cols-10 gap-10 md:gap-5">
-        <div className="md:col-span-2 flex items-start">
-          <div className="relative w-28 h-10">
+    <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-6 md:px-10 lg:px-[69px]">
+      <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-10 md:grid-cols-10 md:gap-5">
+        <div className="flex items-start md:col-span-2">
+          <Link href="/">
             <Image
               src="/LogoForFooter.png"
               alt="SlungAI Logo"
-              fill
+              width={109}
+              height={43}
               className="object-contain"
-              priority
             />
-          </div>
+          </Link>
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="font-[Syne] text-lg mb-5">Quick Menu</h3>
-          <ul className="space-y-3 text-slate-100/90 text-sm">
+          <h3 className="mb-5 font-[Syne] text-lg">Quick Menu</h3>
+          <ul className="space-y-3 text-sm text-slate-100/90">
             {['Platform', 'How It Works', 'Pricing', 'Blog', 'Contact Us'].map((item) => (
               <li key={item}>
-                <a href="#" className="hover:text-white font-[Syne] transition-colors">
+                <a href="#" className="font-[Syne] transition-colors hover:text-white">
                   {item}
                 </a>
               </li>
@@ -30,11 +31,11 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-2">
-          <h3 className="font-[Syne] text-lg mb-5">About</h3>
-          <ul className="space-y-3 text-slate-100/90 text-sm">
+          <h3 className="mb-5 font-[Syne] text-lg">About</h3>
+          <ul className="space-y-3 text-sm text-slate-100/90">
             {['Teams', 'Office', 'Vision'].map((item) => (
               <li key={item}>
-                <a href="#" className="hover:text-white font-[Syne] transition-colors">
+                <a href="#" className="font-[Syne] transition-colors hover:text-white">
                   {item}
                 </a>
               </li>
@@ -43,21 +44,21 @@ export default function Footer() {
         </div>
 
         <div className="md:col-span-4">
-          <h3 className="font-[Syne] text-lg mb-4">Subscribe</h3>
+          <h3 className="mb-4 font-[Syne] text-lg">Subscribe</h3>
 
-          <p className="text-slate-100/80 mb-5 font-[Syne] leading-relaxed text-sm md:text-base">
+          <p className="mb-5 font-[Syne] text-sm leading-relaxed text-slate-100/80 md:text-base">
             Subscribe to our newsletter for exclusive updates, insider tips, and offers delivered
             straight to your inbox.
           </p>
 
-          <div className="flex flex-col lg:flex-row gap-3">
+          <div className="flex flex-col gap-3 lg:flex-row">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="min-w-0 flex-1 bg-[#5A79C0] border border-white/20 rounded-md px-4 font-[Syne] py-3 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+              className="min-w-0 flex-1 rounded-md border border-white/20 bg-[#5A79C0] px-4 py-3 font-[Syne] text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/30 focus:outline-none"
             />
 
-            <button className="bg-white text-[#4466B1] font-[Syne] font-semibold px-6 py-3 rounded-md hover:bg-slate-100 transition-colors w-full sm:w-auto">
+            <button className="w-full rounded-md bg-white px-6 py-3 font-[Syne] font-semibold text-[#4466B1] transition-colors hover:bg-slate-100 sm:w-auto">
               Subscribe
             </button>
           </div>

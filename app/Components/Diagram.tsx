@@ -22,25 +22,27 @@ type OutputCardProps = {
 const InputCard = ({ icon: Icon, color, bg, size, setRef }: InputCardProps) => (
   <div
     ref={setRef}
-    className="z-10 flex flex-col items-center justify-center bg-white border border-slate-200 shadow-sm gap-1 shrink-0 w-14 h-[71px] rounded"
+    className="z-10 flex h-[71px] w-14 shrink-0 flex-col items-center justify-center gap-1 rounded border border-slate-200 bg-white"
   >
-    <div className={`flex items-center justify-center w-10 h-10 rounded ${bg}`}>
-      <Icon className={`w-6 h-6 ${color}`} />
+    <div className={`flex h-10 w-10 items-center justify-center rounded ${bg}`}>
+      <Icon className={`h-6 w-6 ${color}`} />
     </div>
-    <span className="text-[9px] text-slate-600 font-medium">{size}</span>
+    <span className="font-[Inter] text-[9px] font-normal text-[#000000]">{size}</span>
   </div>
 );
 
 const OutputCard = ({ value, unit, label, setRef }: OutputCardProps) => (
   <div
     ref={setRef}
-    className="z-10 flex flex-col items-center justify-center bg-white border border-slate-200 shadow-sm gap-px shrink-0 w-24 h-[71px] rounded"
+    className="z-10 flex h-[71px] w-24 shrink-0 flex-col items-center justify-center gap-px rounded border-[0.5px] border-[#EBE9E9] bg-white"
   >
     <div className="flex items-baseline">
-      <span className="text-xl font-semibold text-slate-800">{value}</span>
-      <span className="text-[10px] ml-px text-slate-800">{unit}</span>
+      <span className="font-[Inter] text-[24px] font-normal text-[#000000]">{value}</span>
+      <span className="font-[Inter] text-[10px] font-normal text-[#000000]">{unit}</span>
     </div>
-    <span className="text-[8px] text-slate-400 uppercase tracking-wider">{label}</span>
+    <span className="font-[Inter] text-[8px] font-normal tracking-wider text-[#6B6B68]">
+      {label}
+    </span>
   </div>
 );
 
@@ -113,13 +115,13 @@ export default function ResponsiveDiagram() {
   }, [calculatePaths]);
 
   return (
-    <div className="w-full max-w-[499px]  mx-auto">
+    <div className="mx-auto w-full max-w-[499px]">
       <div
         ref={containerRef}
-        className="relative flex items-center justify-between min-h-[320px] w-full"
+        className="relative flex min-h-[320px] w-full items-center justify-between"
       >
         {/* SVG CONNECTIONS */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
+        <svg className="pointer-events-none absolute inset-0 h-full w-full overflow-visible">
           <defs>
             <marker id="circleDot" markerWidth="6" markerHeight="6" refX="3" refY="3">
               <circle cx="3" cy="3" r="1.5" fill="#CBD5E1" />
@@ -155,36 +157,36 @@ export default function ResponsiveDiagram() {
           <InputCard
             setRef={(el) => (inputRefs.current[0] = el)}
             icon={FileText}
-            color="text-rose-500"
-            bg="bg-rose-50"
+            color="text-[#A32D2D]"
+            bg="bg-[#FCEBEB]"
             size="4.2 MB"
           />
           <InputCard
             setRef={(el) => (inputRefs.current[1] = el)}
             icon={FileText}
-            color="text-blue-500"
-            bg="bg-blue-50"
+            color="text-[#0C447C]"
+            bg="bg-[#E6F1FB]"
             size="0.9 MB"
           />
           <InputCard
             setRef={(el) => (inputRefs.current[2] = el)}
             icon={Table}
-            color="text-emerald-600"
-            bg="bg-emerald-50"
+            color="text-[#27500A]"
+            bg="bg-[#E4F4EC]"
             size="1.5 MB"
           />
         </div>
 
         {/* CENTER LOGO */}
         <div ref={centerRef} className="relative z-20">
-          <div className="w-16 h-16 sm:w-24 sm:h-24 rounded-full bg-slate-300 flex items-center justify-center p-2 border border-slate-50 shadow-sm">
-            <div className="w-full h-full rounded-full bg-[#4669B8] flex items-center justify-center overflow-hidden">
-              <div className="relative w-6 h-6 sm:w-10 sm:h-10">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full border-8 border-[#4164B021/50] bg-slate-300 shadow-sm sm:h-24 sm:w-24">
+            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-[#4669B8]">
+              <div className="relative h-8 w-8 sm:h-15.5 sm:w-15.5">
                 <Image
                   src="/slung.png"
                   alt="Logo"
                   fill
-                  className="object-contain invert brightness-0"
+                  className="object-contain brightness-0 invert"
                   priority
                 />
               </div>

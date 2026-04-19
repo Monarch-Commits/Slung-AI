@@ -6,29 +6,30 @@ import MobileNavbar from './MobileNav';
 export default function Navbar() {
   return (
     <nav className="w-full border bg-white">
-      <div className="max-w-[1170px] mx-auto px-4 sm:px-6 md:px-10 lg:px-[69px] h-[72px] flex items-center justify-between">
+      <div className="mx-auto flex h-[72px] max-w-[1170px] items-center justify-between px-4 sm:px-6 md:px-10 lg:px-[69px]">
         <Link href="/">
           <Image
-            src="/LogoNav.png"
+            src="/NavigationLogo.png"
             alt="SlungAI Logo"
             width={130}
             height={52}
             className="object-contain"
+            quality={75}
           />
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-7">
-          <ul className="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-600">
+          <ul className="hidden items-center gap-8 text-sm font-medium text-gray-600 lg:flex">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <Link href={link.href} className="hover:text-blue-900 transition-colors">
+                <Link href={link.href} className="transition-colors hover:text-blue-900">
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
 
-          <button className="sm:px-[12px] py-2 px-3 sm:py-[4px] md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px] border-2 border-[#4361ee] text-[#4361ee] rounded-md font-semibold hover:bg-blue-50 transition-all">
+          <button className="rounded-md border-2 border-[#4361ee] px-3 py-2 font-semibold text-[#4361ee] transition-all hover:bg-blue-50 sm:px-[12px] sm:py-[4px] md:px-[18px] md:py-[6px] lg:px-[24px] lg:py-[10px]">
             See Our Plans
           </button>
 

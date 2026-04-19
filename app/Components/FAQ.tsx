@@ -30,7 +30,7 @@ export default function FAQ() {
         </h2>
 
         {/* List */}
-        <div className="flex flex-col gap-3 md:gap-4">
+        <div className="flex flex-col gap-3 md:gap-[24px]">
           {FAQs.map((faq, index) => {
             const isOpen = openIndex === index;
 
@@ -38,7 +38,7 @@ export default function FAQ() {
               <div
                 key={index}
                 className={`gap-[16px] overflow-hidden rounded-md transition-all duration-300 ${
-                  isOpen ? 'bg-[#f8fafc] p-4 md:p-8' : 'bg-transparent px-4 py-4 md:px-8 md:py-6'
+                  isOpen ? 'bg-[#F8F8F8] p-4 md:p-8' : 'bg-transparent px-4 py-4 md:px-8 md:py-6'
                   // border-b border-gray-50
                 }`}
               >
@@ -48,7 +48,7 @@ export default function FAQ() {
                 >
                   <span
                     className={`font-[Syne] text-[18px] leading-[27.9px] font-semibold transition-colors ${
-                      isOpen ? 'text-[#4361ee]' : 'text-[#1e293b]'
+                      isOpen ? 'text-[#4164B0]' : 'text-[#1A1A18]'
                     }`}
                   >
                     {faq.question}

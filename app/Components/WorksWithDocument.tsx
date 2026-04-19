@@ -2,21 +2,21 @@ import Image from 'next/image';
 
 export default function WorksWithDocument() {
   return (
-    <section className="w-full mx-auto flex justify-center bg-white border ">
-      <div className="w-full  px-4 md:px-8 lg:px-0 py-20 md:py-[100px] flex flex-col items-center justify-center gap-6">
+    <section className="mx-auto flex w-full justify-center border bg-white">
+      <div className="flex w-full flex-col items-center justify-center gap-6 px-4 py-20 md:px-8 md:py-[100px] lg:px-0">
         {/* Title */}
-        <h2 className="font-[Inter] font-semibold text-3xl md:text-[48px] leading-none tracking-[-2.05px] text-center text-[#1e293b]">
+        <h2 className="text-center font-[Inter] text-3xl leading-none font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
           Works with <span className="text-[#4164B0] italic">Documents from</span>
         </h2>
 
         {/* Logos */}
-        <div className="w-full max-w-[850px] flex justify-center opacity-80 hover:opacity-100 transition">
+        <div className="flex w-full max-w-[850px] justify-center opacity-80 transition hover:opacity-100">
           <Image
             src="/WorkWithDocument.png"
             alt="Supported Document Integrations"
             width={850}
             height={60}
-            className="w-full h-auto object-contain px-2 md:px-0"
+            className="h-auto w-full object-contain px-2 md:px-0"
           />
         </div>
       </div>
