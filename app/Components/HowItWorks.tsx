@@ -16,9 +16,9 @@ export default function HowItWorks() {
           </span>
         </div>
 
-        <h2 className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
+        <p className="text-start font-[Inter] text-[48px] leading-none font-semibold tracking-[-2.05px] text-[#1A1A18]">
           Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
-        </h2>
+        </p>
 
         <div className="grid grid-cols-1 gap-[21.6px] sm:grid-cols-2 md:grid-cols-3">
           {steps.map((step) => (
