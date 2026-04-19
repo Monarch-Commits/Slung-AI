@@ -37,7 +37,7 @@ export default function HowItWorks() {
 
               <div className={`relative flex-1 overflow-hidden rounded-b-lg ${step.linear} `}>
                 <div
-                  className={`absolute ${step.position} border-white-100/50 overflow-hidden border-x-4 border-t-4`}
+                  className={`absolute ${step.position} overflow-hidden rounded-t-sm border-x-4 border-white/50`}
                 >
                   <Image
                     src={step.img}
