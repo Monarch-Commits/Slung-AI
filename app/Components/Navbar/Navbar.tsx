@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[72px] max-w-[1170px] items-center justify-between px-4 sm:px-6 md:px-10 lg:px-[69px]">
         <Link href="/">
           <Image
-            src="/NavigationLogo.png"
+            src="/NavLogo.svg"
             alt="SlungAI Logo"
             width={114}
             height={46}

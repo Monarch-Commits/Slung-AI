@@ -37,7 +37,7 @@ export default function CompareSection() {
 
             <div className="flex items-center justify-center rounded-t bg-[#BBCEF7] py-6">
               <Image
-                src="/CompareImage.png"
+                src="/CompareImage.svg"
                 alt="SlungAI"
                 width={114.59}
                 height={46}

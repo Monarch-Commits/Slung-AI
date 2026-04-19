@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-
 const avatars = [
   { id: 1, label: 'MP', pos: 'top-[15%] left-[30%]', color: 'bg-purple-400' },
-  { id: 2, src: 'https://i.pravatar.cc/100?img=1', pos: 'top-[10%] right-[30%]' },
-  { id: 3, src: 'https://i.pravatar.cc/100?img=12', pos: 'bottom-[25%] right-[20%]' },
-  { id: 4, label: 'HJ', pos: 'bottom-[45%] right-[45%]', color: 'bg-blue-300' },
+  { id: 2, src: '/Avatar/1.jpg', pos: 'top-[10%] right-[30%]' },
+  { id: 3, src: '/Avatar/2.jpg', pos: 'bottom-[25%] right-[20%]' },
+  { id: 4, src: '/Avatar/3.jpg', pos: 'top-[15%] right-[20%]' },
+  { id: 5, label: 'TJ', pos: 'bottom-[45%] right-[45%]', color: 'bg-blue-300' },
 ];
 
 export default function Collaborate() {
@@ -21,12 +21,13 @@ export default function Collaborate() {
       <div className="absolute -bottom-30 left-2 z-10 w-full max-w-[250px] rounded-t-3xl bg-white shadow-2xl ring-6 ring-gray-300/50 sm:-bottom-2 sm:left-6 sm:max-w-[371px]">
         <div className="relative mb-10 flex w-full items-center justify-end gap-[18px] border-b-4 px-4 py-4">
           <div className="flex -space-x-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-gray-200" />
-            ))}
-            <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-purple-100 text-[10px] font-bold">
-              +8
-            </div>
+            <Image
+              src="/Avatar/Frame.svg"
+              alt="SlungAI Logo"
+              width={96}
+              height={36}
+              className="object-contain"
+            />
           </div>
           <button className="rounded-md border border-gray-200 px-6 py-1.5 text-sm font-medium transition hover:bg-gray-50">
             Share

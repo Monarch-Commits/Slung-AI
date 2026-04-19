@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex items-start md:col-span-2">
           <Link href="/">
             <Image
-              src="/LogoForFooter.png"
+              src="/footer.svg"
               alt="SlungAI Logo"
               width={109}
               height={43}

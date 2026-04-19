@@ -21,7 +21,7 @@ export const steps = [
     title: 'Model',
     description:
       'Your underwriting is built automatically. Institutional-grade assumptions, live rent comps, and anomaly detection — all included.',
-    img: '/cards/Step2.png',
+    img: '/cards/2.svg',
     position: 'bottom-0 left-6 h-[90%] w-[100%] rounded-t-lg ',
     linear: ' bg-gradient-to-t from-[#F3F9FF] to-[#BBD6FF]',
   },
@@ -29,7 +29,7 @@ export const steps = [
     title: 'Decide',
     description:
       'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
-    img: '/cards/Step3.png',
+    img: '/cards/3.svg',
     position: 'bottom-0 -left-20 h-[90%] w-[120%] rounded-t-lg ',
     linear:
       'bg-gradient-to-t from-[#F5FAFE] via-[#2385D8] via-[#BBD6FF] via-[#2385D8] to-[#BBD6FF]',
