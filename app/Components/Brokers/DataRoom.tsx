@@ -6,7 +6,7 @@ export default function DataRoom() {
 
   return (
     <div className="relative flex h-full w-full items-start justify-center rounded-t-md bg-gradient-to-r from-[#72B4FD] to-[#72B4FD] px-10 font-sans text-[11px]">
-      <div className="absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-4 border-t-4 border-white/50 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
+      <div className="absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-6 border-t-6 border-black/10 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
         {/* HEADER */}
         <div className="flex items-center justify-between px-3 py-2">
           <h2 className="text-xs font-medium text-[#406298]">Share Report</h2>
