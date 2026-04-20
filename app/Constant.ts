@@ -7,6 +7,20 @@ export const NAV_LINKS = [
   { label: 'Sign In', href: '/SignInPage' },
 ];
 
+export const FOOTER_LINKS_QUICKMENU = [
+  { label: 'Platform', href: '/#platform' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'Contact Us', href: '#' },
+];
+
+export const FOOTER_LINKS_ABOUT = [
+  { label: 'Teams', href: '#' },
+  { label: 'Office', href: '#' },
+  { label: 'Vision', href: '#' },
+];
+
 // Data for the How It Works section
 export const steps = [
   {

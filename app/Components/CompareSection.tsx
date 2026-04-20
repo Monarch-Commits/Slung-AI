@@ -31,7 +31,6 @@ export default function CompareSection() {
       {/* TABLE */}
       <div className="w-full">
         <div className="flex w-full flex-col">
-          {/* HEADER ROW - Hidden on mobile, Flex on Desktop */}
           <div className="hidden w-full md:grid md:grid-cols-[1fr_1.8fr_1.8fr]">
             <div className="px-6 py-2"></div>
 
@@ -58,12 +57,10 @@ export default function CompareSection() {
                 key={i}
                 className="group flex w-full flex-col border-t border-gray-100 md:grid md:grid-cols-[1fr_1.8fr_1.8fr] md:border-t-0"
               >
-                {/* LABEL - Full width on mobile */}
                 <div className="flex min-h-[50px] items-center border-gray-100 pt-4 font-[Inter] text-[16px] leading-tight font-semibold text-[#1A1A18] md:h-[76px] md:border-t md:pt-0 md:text-[18px] md:leading-[27.9px]">
                   {row.label}
                 </div>
 
-                {/* SLUNG - Highlights on mobile */}
                 <div className="my-2 flex h-auto items-center rounded-md bg-[#BBCEF7] px-4 py-4 md:my-0 md:h-[76px] md:rounded-none md:border md:border-white md:px-6 md:py-0">
                   <div className="flex items-start gap-2">
                     <Check size={18} className="mt-1 shrink-0 text-[#18B007]" />

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { FOOTER_LINKS_ABOUT, FOOTER_LINKS_QUICKMENU } from '../Constant';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -37,14 +38,14 @@ export default function Footer() {
         <div className="md:col-span-2">
           <p className="mb-5 font-[Syne] text-[14px] font-medium">Quick Menu</p>
           <ul className="space-y-3 text-sm text-slate-100/90">
-            {['Platform', 'How It Works', 'Pricing', 'Blog', 'Contact Us'].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
+            {FOOTER_LINKS_QUICKMENU.map((item, i) => (
+              <li key={i}>
+                <Link
+                  href={item.href}
                   className="font-[Syne] text-[14px] leading-[20px] font-normal tracking-[-0.07px] transition-colors hover:text-white"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -53,14 +54,14 @@ export default function Footer() {
         <div className="md:col-span-2">
           <p className="mb-5 font-[Syne] text-[14px] font-medium">About</p>
           <ul className="space-y-3 text-sm text-slate-100/90">
-            {['Teams', 'Office', 'Vision'].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
+            {FOOTER_LINKS_ABOUT.map((item, i) => (
+              <li key={i}>
+                <Link
+                  href={item.href}
                   className="font-[Syne] text-[14px] leading-[20px] font-normal tracking-[-0.07px] transition-colors hover:text-white"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
