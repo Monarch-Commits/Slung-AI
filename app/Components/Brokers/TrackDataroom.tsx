@@ -66,7 +66,7 @@ export default function TrackDataRoom() {
           <div className="flex w-full overflow-x-auto rounded border border-gray-200 bg-white">
             <table className="w-full border-collapse text-left text-[10px]">
               <thead>
-                <tr className="border-b bg-[#f9fafb]">
+                <tr className="border-b border-[#E4E4E4] bg-[#f9fafb]">
                   <th className="px-2 py-1 font-normal text-gray-500">Name</th>
                   <th className="px-2 py-1 font-normal text-gray-500">Email</th>
                   <th className="px-2 py-1 font-normal text-gray-500">Last Opened</th>

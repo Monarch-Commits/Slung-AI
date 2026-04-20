@@ -110,7 +110,7 @@ import Image from 'next/image';
 export default function LiveRent() {
   return (
     <div className="relative flex h-full w-full items-end overflow-hidden rounded-t-md bg-gradient-to-r from-[#2F90EA] via-[#84C3F9] to-[#E3EEF9]">
-      <div className="relative mx-auto aspect-[19/9] max-h-[90%] w-[95%] max-w-[530.1px] overflow-hidden rounded-t-lg px-4">
+      <div className="relative mx-auto aspect-[19/9] max-h-[304px] w-[95%] max-w-[523.71px] overflow-hidden rounded-t-lg px-4">
         <Image
           src="/Investors/pdf.svg"
           alt="Underwriting Model"
