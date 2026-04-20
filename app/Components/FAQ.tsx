@@ -39,7 +39,6 @@ export default function FAQ() {
                 key={index}
                 className={`gap-[16px] overflow-hidden rounded-md transition-all duration-300 ${
                   isOpen ? 'bg-[#F8F8F8] p-4 md:p-8' : 'bg-transparent px-4 py-4 md:px-8 md:py-6'
-                  // border-b border-gray-50
                 }`}
               >
                 <button

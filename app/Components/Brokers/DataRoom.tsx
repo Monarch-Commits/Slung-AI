@@ -87,3 +87,21 @@ export default function DataRoom() {
     </div>
   );
 }
+
+// import Image from 'next/image';
+
+// export default function DataRoom() {
+//   return (
+//     <div className="relative flex h-full w-full items-end overflow-hidden rounded-t-md bg-gradient-to-r from-[#2F90EA] via-[#84C3F9] to-[#E3EEF9]">
+//       <div className="relative mx-auto aspect-19/8.5 max-h-[285px] w-[95%] max-w-[550px] overflow-hidden rounded-t-lg bg-white/50 shadow-sm">
+//         <Image
+//           src="/Brokers/data.svg"
+//           alt="Underwriting Model"
+//           fill
+//           className="object-cover object-top"
+//           priority
+//         />
+//       </div>
+//     </div>
+//   );
+// }
