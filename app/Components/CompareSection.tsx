@@ -4,7 +4,7 @@ import { Compare } from '../Constant';
 
 export default function CompareSection() {
   return (
-    <section className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-6 border px-6 py-[60px] sm:px-10 md:px-[42px] md:py-[100px]">
+    <section className="mx-auto flex w-full max-w-[1170px] flex-col items-center gap-6 border border-[#E4E4E4] px-6 py-[60px] sm:px-10 md:px-[42px] md:py-[100px]">
       {/* HEADER */}
       <div className="w-full">
         <div className="mb-8 flex w-full items-center justify-between">
@@ -19,7 +19,7 @@ export default function CompareSection() {
         </div>
 
         <h2 className="mb-4 text-start font-[Inter] text-[32px] leading-tight font-semibold tracking-[-1px] text-[#0f172a] md:text-[48px] md:leading-none md:tracking-[-2.05px]">
-          Why others <span className="text-[#4164B0] italic">switch to Slung</span>
+          Why others <span className="text-brand-primary italic">switch to Slung</span>
         </h2>
 
         <p className="font-[Syne] text-[16px] leading-[24px] font-normal tracking-normal text-[#6B6B68] md:text-[18px] md:leading-[27.9px]">
@@ -110,7 +110,7 @@ export default function CompareSection() {
 
       {/* BUTTON */}
       <div className="mt-8">
-        <button className="w-full rounded-lg border-2 px-8 py-3 font-[Inter] text-[16px] leading-[25.6px] font-medium text-[#0f172a] md:w-auto">
+        <button className="w-full rounded-lg border-2 border-[#E4E4E4] px-8 py-3 font-[Inter] text-[16px] leading-[25.6px] font-medium text-[#0f172a] md:w-auto">
           See Our Plans
         </button>
       </div>

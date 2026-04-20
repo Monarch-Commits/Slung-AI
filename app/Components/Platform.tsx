@@ -41,7 +41,7 @@ export default function Platform() {
   return (
     <section
       id="platform"
-      className="mx-auto flex w-full justify-center border-x border-b bg-white"
+      className="mx-auto flex w-full justify-center border-x border-b border-[#E4E4E4] bg-white"
     >
       <div className="mx-auto w-full px-4 pt-12 sm:px-6 md:px-[58.5px] md:pt-[47px]">
         {/* TOGGLE */}
@@ -50,7 +50,7 @@ export default function Platform() {
             onClick={() => handleUserChange('investors')}
             className={`flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal transition ${
               activeUser === 'investors'
-                ? 'bg-[#4164B00F] text-[#4164B0]'
+                ? 'text-brand-primary bg-[#4164B00F]'
                 : 'bg-white text-[#6B6B68]'
             }`}
           >
@@ -62,7 +62,9 @@ export default function Platform() {
           <button
             onClick={() => handleUserChange('brokers')}
             className={`flex-1 p-[10px] text-center font-[Syne] text-[18px] leading-[27.9px] font-normal transition ${
-              activeUser === 'brokers' ? 'bg-[#4164B00F] text-[#4164B0]' : 'bg-white text-[#6B6B68]'
+              activeUser === 'brokers'
+                ? 'text-brand-primary bg-[#4164B00F]'
+                : 'bg-white text-[#6B6B68]'
             }`}
           >
             For Brokers
@@ -81,7 +83,7 @@ export default function Platform() {
                     <div className="mb-3 flex items-center justify-between">
                       <span
                         className={`font-[Inter] text-[18px] leading-[27.9px] ${
-                          isActive ? 'font-semibold text-[#4164B0]' : 'text-slate-400'
+                          isActive ? 'text-brand-primary font-semibold' : 'text-slate-400'
                         }`}
                       >
                         {item.label}

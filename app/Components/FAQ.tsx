@@ -26,7 +26,7 @@ export default function FAQ() {
 
         {/* Title */}
         <p className="text-start font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
-          Frequently Asked <span className="text-[#4164B0] italic">Questions</span>
+          Frequently Asked <span className="text-brand-primary italic">Questions</span>
         </p>
 
         {/* List */}
@@ -48,7 +48,7 @@ export default function FAQ() {
                 >
                   <span
                     className={`font-[Syne] text-[18px] leading-[27.9px] font-semibold transition-colors ${
-                      isOpen ? 'text-[#4164B0]' : 'text-[#1A1A18]'
+                      isOpen ? 'text-brand-primary' : 'text-[#1A1A18]'
                     }`}
                   >
                     {faq.question}

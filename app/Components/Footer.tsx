@@ -1,7 +1,24 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email) {
+      alert('Please enter your email');
+      return;
+    }
+
+    alert('Subscribed successfully!');
+
+    setEmail('');
+  };
+
   return (
     <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-6 md:px-10 lg:px-[69px]">
       <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-10 md:grid-cols-10 md:gap-5">
@@ -57,17 +74,22 @@ export default function Footer() {
             straight to your inbox.
           </p>
 
-          <div className="flex flex-col gap-3 lg:flex-row">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 lg:flex-row">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="min-w-0 flex-1 rounded-md border border-white/20 bg-[#5A79C0] px-4 py-3 font-[Syne] text-white placeholder:text-white/60 focus:ring-2 focus:ring-white/30 focus:outline-none"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="min-w-0 flex-1 rounded-md border border-white/20 bg-[#5A79C0] px-4 py-3 text-center font-[Syne] text-[14px] leading-[25.6px] font-medium text-white placeholder:text-white focus:ring-2 focus:ring-white/30 focus:outline-none"
             />
 
-            <button className="w-full rounded-md bg-white px-6 py-3 font-[Syne] font-semibold text-[#4466B1] transition-colors hover:bg-slate-100 sm:w-auto">
+            <button
+              type="submit"
+              className="text-brand-primary w-full rounded-md bg-white px-6 py-3 font-[Syne] font-semibold transition-colors hover:bg-slate-100 sm:w-auto"
+            >
               Subscribe
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

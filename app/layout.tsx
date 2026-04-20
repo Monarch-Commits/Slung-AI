@@ -1,26 +1,21 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Footer from './Components/Footer';
 import { Syne } from 'next/font/google';
 import NavbarWrapper from './Components/Navbar/NavbarWrapper';
+import { DM_Sans } from 'next/font/google';
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
 
 const syne = Syne({
   subsets: ['latin'],
 });
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
 const inter = Inter({
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin'],
 });
 
@@ -40,13 +35,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${syne.className} ${inter.className} h-full antialiased`}
+      className={` ${syne.className} ${inter.className} ${dmSans.className} h-full antialiased`}
     >
       <body className="flex min-h-full w-full flex-col">
         <NavbarWrapper />
         {children}
 
-        <main className="bg-[#4164B0] py-14 font-sans text-white md:py-16">
+        <main className="bg-brand-primary py-14 font-sans text-white md:py-16">
           <Footer />
         </main>
       </body>

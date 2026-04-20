@@ -9,7 +9,7 @@ export default function TrackDataRoom() {
 
   return (
     <div className="relative flex h-full w-full items-start justify-center rounded-t-md bg-[linear-gradient(114.36deg,_#CFDEF4_7.91%,_#97B9EC_18.9%,_#77AFEC_33.3%,_#76B2F6_46.18%,_#72B4FD_58.31%,_#46A2F4_69.29%,_#2A8CE8_86.72%)] px-10 font-sans text-[11px]">
-      <div className="border-gray/50 absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-6 border-t-6 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
+      <div className="absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-6 border-t-6 border-black/10 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
         {/* HEADER (fixed) */}
         <div className="flex items-center justify-between px-3 py-2">
           <h2 className="text-xs font-medium text-[#406298]">Share Report</h2>

@@ -3,7 +3,7 @@ import { steps } from '../Constant';
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="w-full border bg-white">
+    <section id="how-it-works" className="w-full border border-[#E4E4E4] bg-white">
       <div className="mx-auto flex max-w-[1170px] flex-col gap-[24px] px-6 py-[100px] sm:px-10 md:px-[42px]">
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-6">
@@ -17,7 +17,7 @@ export default function HowItWorks() {
         </div>
 
         <p className="text-start font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
-          Three steps to <span className="text-[#4164B0] italic">Decision Ready Deals</span>
+          Three steps to <span className="text-brand-primary italic">Decision Ready Deals</span>
         </p>
 
         <div className="grid grid-cols-1 gap-[21.6px] sm:grid-cols-2 lg:grid-cols-3">

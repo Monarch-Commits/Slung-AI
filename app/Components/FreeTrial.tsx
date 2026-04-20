@@ -4,7 +4,7 @@ export default function Trial() {
   return (
     <div
       id="pricing"
-      className="relative mx-auto flex w-full flex-col items-center justify-center border px-6 py-[100px] font-sans sm:px-10 md:px-[42px]"
+      className="relative mx-auto flex w-full flex-col items-center justify-center border border-[#E4E4E4] px-6 py-[100px] font-sans sm:px-10 md:px-[42px]"
     >
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-[0.15]"
@@ -28,13 +28,13 @@ export default function Trial() {
         <div className="w-full max-w-[501px]">
           <p className="mb-6 max-w-xl text-left font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
             Start with a 14-Day <br />
-            <span className="font-[Inter] leading-[1.1] font-semibold tracking-[-2.05px] text-[#4164B0] italic">
+            <span className="text-brand-primary font-[Inter] leading-[1.1] font-semibold tracking-[-2.05px] italic">
               Free Trial of Principal
             </span>
           </p>
 
           <div className="z-10 flex flex-col items-start gap-4 sm:flex-row">
-            <button className="w-full rounded-lg bg-[#4164B0] px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-[#FFFFFF] transition-all sm:w-auto md:px-8 md:py-4">
+            <button className="bg-brand-primary w-full rounded-lg px-6 py-3 text-center font-[Inter] text-[16px] leading-[25.6px] font-medium tracking-normal text-[#FFFFFF] transition-all sm:w-auto md:px-8 md:py-4">
               Start for free
             </button>
 
