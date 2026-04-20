@@ -15,7 +15,7 @@ export default function Testimonial() {
 
         {/* CONTENT */}
         <div className="mx-auto flex max-w-[1218px] flex-col items-center gap-6 text-center">
-          <p className="text-center font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
+          <p className="text-center font-[Inter] text-[32px] leading-[1] font-semibold tracking-[-2.05px] text-[#1e293b] md:text-[48px]">
             Real People, <span className="text-brand-primary italic">Real Deals</span>
           </p>
 
@@ -25,7 +25,7 @@ export default function Testimonial() {
 
           <div className="flex flex-col items-center gap-1">
             <cite className="text-center font-['DM_Sans'] text-[20px] leading-[22.4px] font-medium tracking-normal text-[#1A1A18] not-italic md:text-[24px]">
-              Jordan Y.
+              Jordan Y
             </cite>
 
             <p className="text-center font-[Syne] text-[20px] leading-[19.2px] font-normal tracking-normal text-[#6B6B68] md:text-[24px]">

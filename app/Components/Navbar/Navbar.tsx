@@ -6,7 +6,7 @@ import MobileNavbar from './MobileNav';
 export default function Navbar() {
   return (
     <nav className="w-full border border-[#E4E4E4] bg-white">
-      <div className="mx-auto flex h-[72px] max-w-[1170px] items-center justify-between px-4 sm:px-6 md:px-10 lg:px-[69px]">
+      <div className="mx-auto flex h-[72px] max-w-[1170px] items-center justify-between px-4 sm:px-6 md:px-10">
         <Link href="/">
           <Image
             src="/NavLogo.svg"

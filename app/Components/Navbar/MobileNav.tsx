@@ -13,15 +13,15 @@ import { IoMenuSharp } from 'react-icons/io5';
 
 export default function MobileNavbar() {
   return (
-    <div className="flex items-center lg:hidden justify-center ">
+    <div className="flex items-center justify-center lg:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="icon" aria-label="Open menu">
-            <IoMenuSharp className="w-5 h-5 text-black" />
+          <Button variant="outline" size="icon" className="border-[#E4E4E4]" aria-label="Open menu">
+            <IoMenuSharp className="h-5 w-5 text-black" />
           </Button>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent className="w-52 bg-white border border-gray-200 shadow-lg rounded-md p-1">
+        <DropdownMenuContent className="w-52 rounded-md border border-gray-200 bg-white p-1 shadow-lg">
           {NAV_LINKS.map((item, index) => (
             <DropdownMenuItem key={index} asChild>
               <Link href={item.href} className="w-full text-sm font-medium text-gray-700">

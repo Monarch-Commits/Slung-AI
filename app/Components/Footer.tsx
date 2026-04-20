@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-6 md:px-10 lg:px-[69px]">
+    <div className="mx-auto w-full max-w-[1170px] px-4 sm:px-6 md:px-10">
       <div className="mx-auto grid w-full max-w-[1140px] grid-cols-1 gap-10 md:grid-cols-10 md:gap-5">
         <div className="flex items-start md:col-span-2">
           <Link href="/">

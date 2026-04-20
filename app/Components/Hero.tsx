@@ -2,8 +2,8 @@ import { FaCheck } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <section className="w-full">
-      <div className="mx-auto flex max-w-[1040px] flex-col items-center gap-12 border-x border-[#E4E4E4]">
+    <section className="w-full border-x border-[#E4E4E4]">
+      <div className="mx-auto flex max-w-[1040px] flex-col items-center gap-12">
         <div className="flex w-full max-w-[780.3px] flex-col items-center gap-7 px-4 pt-12 text-center sm:px-6 md:pt-20">
           <div className="inline-flex items-center gap-2 rounded-full bg-[#4164B012] px-3 py-2">
             <span className="relative flex h-2 w-2">
