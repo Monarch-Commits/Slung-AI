@@ -5,7 +5,6 @@ import Hero from './Components/Hero';
 import HowItWorks from './Components/HowItWorks';
 import LogoCloud from './Components/LogoCloud';
 import Platform from './Components/Platform';
-import Test from './Components/Test';
 import Testimonial from './Components/Testimonial';
 import WorksWithDocument from './Components/WorksWithDocument';
 
@@ -22,7 +21,6 @@ export default function Home() {
         <CompareSection />
         <FAQ />
         <FreeTrial />
-        {/* <Test /> */}
       </div>
     </main>
   );
