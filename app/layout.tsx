@@ -41,9 +41,9 @@ export default function RootLayout({
         <NavbarWrapper />
         {children}
 
-        <main className="bg-brand-primary py-14 font-sans text-white md:py-16">
+        <div className="bg-brand-primary py-14 font-sans text-white md:py-16">
           <Footer />
-        </main>
+        </div>
       </body>
     </html>
   );

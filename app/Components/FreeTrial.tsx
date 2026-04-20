@@ -26,9 +26,9 @@ export default function Trial() {
 
       <div className="flex w-full flex-col items-start justify-between gap-4 pt-2 sm:gap-10 md:pt-4 lg:flex-row">
         <div className="w-full max-w-[501px]">
-          <p className="mb-6 max-w-xl text-left font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] text-[#1A1A18] md:text-[48px]">
+          <p className="mb-6 max-w-xl text-left font-[Inter] text-[32px] leading-[1.1] font-semibold tracking-[-2.05px] whitespace-nowrap text-[#1A1A18] md:text-[48px]">
             Start with a 14-Day <br />
-            <span className="text-brand-primary font-[Inter] leading-[1.1] font-semibold tracking-[-2.05px] italic">
+            <span className="text-brand-primary font-[Inter] leading-[1.1] font-semibold tracking-[-2.05px] whitespace-nowrap italic">
               Free Trial of Principal
             </span>
           </p>
