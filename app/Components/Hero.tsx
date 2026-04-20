@@ -5,13 +5,13 @@ export default function Hero() {
     <section className="w-full">
       <div className="mx-auto flex max-w-[1040px] flex-col items-center gap-12 border-x border-[#E4E4E4]">
         <div className="flex w-full max-w-[780.3px] flex-col items-center gap-7 px-4 pt-12 text-center sm:px-6 md:pt-20">
-          <div className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2">
+          <div className="inline-flex items-center gap-2 rounded-full bg-[#4164B012] px-3 py-2">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2D7C5F] opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#2D7C5F]"></span>
             </span>
 
-            <span className="font-inter align-middle text-[13px] leading-[20.8px] font-normal text-slate-600">
+            <span className="align-middle font-[Inter] text-[13px] leading-[20.8px] font-normal text-[#6B6B68]">
               AI underwriting platform for multifamily
             </span>
           </div>

@@ -19,7 +19,7 @@ export default function Collaborate() {
       </div>
 
       <div className="absolute -bottom-30 left-2 z-10 w-full max-w-[250px] rounded-t-3xl bg-white shadow-2xl ring-6 ring-gray-300/50 sm:-bottom-2 sm:left-6 sm:max-w-[371px]">
-        <div className="relative mb-10 flex w-full items-center justify-end gap-[18px] border-b-4 px-4 py-4">
+        <div className="relative mb-10 flex w-full items-center justify-end gap-[18px] border-b-4 border-[#E4E4E4] px-4 py-4">
           <div className="flex -space-x-4">
             <Image
               src="/Avatar/Frame.svg"
@@ -39,7 +39,7 @@ export default function Collaborate() {
       {avatars.map((avatar, index) => (
         <motion.div
           key={avatar.id}
-          className={`absolute ${avatar.pos} flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border-4 border-white font-bold text-white shadow-lg ${avatar.color || ''}`}
+          className={`absolute ${avatar.pos} flex h-8 w-8 items-center justify-center overflow-hidden rounded-full border-4 border-white font-bold text-white shadow-lg sm:h-10 sm:w-10 md:h-12 md:w-12 ${avatar.color || ''}`}
           animate={{
             y: [0, -20, 0],
           }}
