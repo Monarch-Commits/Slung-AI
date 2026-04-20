@@ -23,9 +23,7 @@ export default function DataRoom() {
           </div>
         </div>
 
-        {/* BODY */}
         <div className="flex flex-1 flex-col overflow-y-auto bg-[#fbfcfd] p-2">
-          {/* TOP ROW */}
           <div className="mb-2 flex items-center justify-between gap-5 pt-1 sm:pt-4">
             <div className="flex items-center gap-3">
               <h3 className="text-sm font-normal text-[#406298]">DataRoom</h3>
@@ -36,7 +34,7 @@ export default function DataRoom() {
                   <span className="text-[10px] text-gray-400">Status:</span>
                   <span className="text-[10px] font-medium text-[#4e71ae]">Active</span>
                 </div>
-                {/* Static Toggle Switch */}
+
                 <div className="relative h-[18px] w-[36px] rounded-full bg-[#4e71ae] shadow-inner">
                   <div className="absolute top-[2px] right-[2px] h-[14px] w-[14px] rounded-full bg-white shadow-sm"></div>
                 </div>
@@ -49,7 +47,6 @@ export default function DataRoom() {
             </div>
           </div>
 
-          {/* SUB TABS - Swapped styles based on the new image */}
           <div className="mb-4 flex gap-2">
             <button className="rounded-full bg-[#4e71ae] px-4 py-1 text-[10px] font-medium text-white shadow-sm">
               Access
@@ -59,7 +56,6 @@ export default function DataRoom() {
             </button>
           </div>
 
-          {/* DOCUMENTS ACCORDION SECTION */}
           <div className="flex flex-col overflow-x-auto">
             <div className="mb-2 flex items-center justify-between">
               <div className="flex cursor-pointer items-center gap-1 text-[#406298]">
@@ -69,7 +65,6 @@ export default function DataRoom() {
               <button className="text-[10px] text-gray-300 hover:text-gray-500">Revert all</button>
             </div>
 
-            {/* Document List Container */}
             <div className="overflow-hidden rounded-md border border-gray-100 bg-white shadow-sm">
               {documents.map((doc, index) => (
                 <div
