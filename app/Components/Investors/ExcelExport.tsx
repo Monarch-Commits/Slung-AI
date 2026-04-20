@@ -1,8 +1,6 @@
 // import Image from 'next/image';
 // import React from 'react';
 
-import Image from 'next/image';
-
 // export default function ExcelExport() {
 //   return (
 //     <div className="relative flex h-full w-full flex-col items-center overflow-hidden rounded-t-xl bg-gradient-to-r from-[#2F90EA] via-[#84C3F9] to-[#E3EEF9] px-3 pt-6 sm:px-4 sm:pt-10">
@@ -106,6 +104,8 @@ import Image from 'next/image';
 //     </div>
 //   );
 // }
+
+import Image from 'next/image';
 
 export default function LiveRent() {
   return (

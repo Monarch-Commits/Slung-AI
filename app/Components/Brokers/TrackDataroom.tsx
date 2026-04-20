@@ -10,13 +10,11 @@ export default function TrackDataRoom() {
   return (
     <div className="relative flex h-full w-full items-start justify-center rounded-t-md bg-[linear-gradient(114.36deg,_#CFDEF4_7.91%,_#97B9EC_18.9%,_#77AFEC_33.3%,_#76B2F6_46.18%,_#72B4FD_58.31%,_#46A2F4_69.29%,_#2A8CE8_86.72%)] px-10 font-sans text-[11px]">
       <div className="absolute bottom-0 flex h-[98%] w-[95%] max-w-full flex-col overflow-hidden rounded-t-lg border-x-6 border-t-6 border-black/10 bg-white px-4 shadow-sm sm:h-[300px] sm:w-[85%]">
-        {/* HEADER (fixed) */}
         <div className="flex items-center justify-between px-3 py-2">
           <h2 className="text-xs font-medium text-[#406298]">Share Report</h2>
           <X className="h-4 w-4 cursor-pointer text-gray-400 hover:text-gray-600" />
         </div>
 
-        {/* TABS */}
         <div className="flex border-b border-gray-100 bg-[#f9fafb] px-2">
           <div className="translate-y-[1px] rounded-t-md border-x border-t border-gray-200 bg-white px-3 py-1 text-[10px] font-medium text-[#406298]">
             DataRoom
@@ -26,9 +24,7 @@ export default function TrackDataRoom() {
           </div>
         </div>
 
-        {/* BODY */}
         <div className="flex flex-1 flex-col bg-[#fbfcfd] p-2">
-          {/* TOP ROW */}
           <div className="mb-2 flex items-center justify-between gap-5 pt-1 sm:pt-4">
             <div className="flex items-center gap-3">
               <h3 className="text-sm font-normal text-[#406298]">DataRoom</h3>
@@ -62,7 +58,6 @@ export default function TrackDataRoom() {
             </button>
           </div>
 
-          {/* TABLE (scrollable area) */}
           <div className="flex w-full overflow-x-auto rounded border border-gray-200 bg-white">
             <table className="w-full border-collapse text-left text-[10px]">
               <thead>
