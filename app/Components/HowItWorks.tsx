@@ -37,14 +37,17 @@ export default function HowItWorks() {
 
               <div className={`relative flex-1 overflow-hidden rounded-b-lg ${step.linear} `}>
                 <div
-                  className={`absolute ${step.position} overflow-hidden rounded-t-sm border-x-4 border-white/50`}
+                  className={`absolute ${step.position} overflow-hidden rounded-t-sm border-x-4 ${
+                    index === 0 ? 'border-white/50' : 'border-none'
+                  }`}
                 >
                   <Image
                     src={step.img}
                     alt={step.title}
                     fill
-                    className="object-cover"
+                    className={`object-bottom ${index === 0 ? 'object-cover' : 'object-contain'}`}
                     priority={true}
+                    unoptimized={step.img.endsWith('.svg')}
                   />
                 </div>
                 {index === 0 && (

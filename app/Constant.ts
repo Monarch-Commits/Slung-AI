@@ -28,7 +28,7 @@ export const steps = [
     description:
       'Drop in your documents — rent rolls, T-12s, operating memoranda. Any format, any property management system.',
     img: '/cards/Step1.png',
-    position: 'bottom-0 left-1/2  border-t-4 -translate-x-1/2 rounded-t-lg  h-[90%] w-[220px] ',
+    position: 'bottom-0 left-1/2 border-t-4 -translate-x-1/2 rounded-t-lg h-[90%] w-[220px]',
     linear: 'bg-gradient-to-t from-[#2385D8] to-[#E6F4FE]',
   },
   {
@@ -44,7 +44,7 @@ export const steps = [
     description:
       'In minutes, not hours. Know exactly where the deal stands — and share it with anyone who needs to see it.',
     img: '/cards/3.svg',
-    position: 'bottom-0 -left-20 h-[90%] w-[115%] rounded-t-lg ',
+    position: 'bottom-0 -left-20 h-[90%] w-[110%] rounded-t-lg ',
     linear:
       'bg-gradient-to-t from-[#F5FAFE] via-[#2385D8] via-[#BBD6FF] via-[#2385D8] to-[#BBD6FF]',
   },

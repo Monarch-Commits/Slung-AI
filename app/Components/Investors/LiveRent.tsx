@@ -11,7 +11,6 @@ export default function LiveRent() {
           className="object-contain object-top"
           priority
           unoptimized
-          quality={100}
         />
       </div>
     </div>
